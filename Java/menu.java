@@ -10,10 +10,10 @@ class Menu {
     System.out.println(" 0 - Uscire");
     System.out.println(" 1 ");
     System.out.println(" 2 ");
-    Scanner ciao = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
 
     // Acquisisco il valore per la scelta
-    int r = ciao.nextInt();
+    int r = input.nextInt();
 
     // Effettuo la verifica per l'evento selezionato
     if ( r == 0 ){
