@@ -1,5 +1,9 @@
-import java.util.Scanner;
+import java.util.Scanner; //serve per importare librerie che contengono classi di oggetti
 
+/* --------------------------------
+Eduardo Boanca 4C Informatica
+Primo programma Java
+---------------------------------*/
 public class controllo {
     public static void main(String [] args)
     {
@@ -12,8 +16,10 @@ public class controllo {
             System.out.println("1 - Visualizza su schermo 'HELLO WORLD' ");
             System.out.println("2 - Visualizza su schermo un numero casuale");
             System.out.println("3 - Visualizza su schermo il tuo nome");
-            Scanner scanner = new Scanner(System.in);  
-            scelta = scanner.nextInt();
+            Scanner sc = new Scanner(System.in); //
+            System.out.println("Scelta: ");
+            scelta = sc.nextInt(); /* Scans the next token of the input as an int. 
+                                    su oggetto sc, prende il numero int da tastiera e lo inserisce nella variabile scelta */
 
 
         switch (scelta) 
@@ -23,7 +29,7 @@ public class controllo {
             break;
 
             case 1:
-            System.out.println("Hello World!");
+                System.out.println("Hello World!");
             break;
 
             case 2:
