@@ -3,11 +3,22 @@ class Automobile {
     String targa;
     String marca;
     int cavalli;
-    int stato;
+    int stato; //stato di accesione 0 = spento, 1 = acceso;
     int speed;
 
     //Costruttore
+    //costruttore con una firma che inizia con una stringa
     public Automobile(String mytarga, String mymarca, int mycavalli, int mystato, int myspeed)
+    {
+        marca = mymarca;
+        targa = mytarga;
+        cavalli = mycavalli;
+        stato = mystato;
+        speed = myspeed;
+    }
+
+    //un secondo costruttore con una firma diversa (prima un intero e poi una stringa)
+    public Automobile(int mycavalli, String mytarga, String mymarca, int mystato, int myspeed)
     {
         marca = mymarca;
         targa = mytarga;

@@ -41,7 +41,7 @@ public class controllo {
             case 3:
                 Scanner input = new Scanner (System.in);
                 System.out.print("\nInserisci il nome: ");
-                String firstName = input.next();
+                String firstName = input.next(); //prende un input stringa
                 System.out.print("Inserisci il cognome: ");
                 String lastName = input.next();
                 System.out.println();
