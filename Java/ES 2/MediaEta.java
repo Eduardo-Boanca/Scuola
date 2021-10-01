@@ -10,7 +10,7 @@ Opzionale : Dire di quale persona si sta facendo l'input (Es. "Inserire l'età d
 Opzionale : Dire quale persona è più vecchia/giovane.
 -----------------------------------------------------------------------------------------------------*/
 
-public class esercizio {
+public class MediaEta {
     public static void main(String[] args) {
         InputStreamReader input = new InputStreamReader(System.in);
         BufferedReader tastiera = new BufferedReader(input);
