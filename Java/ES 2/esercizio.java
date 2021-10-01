@@ -20,7 +20,7 @@ public class esercizio {
 
         do {
 
-            System.out.print("Salve, inserisca il numero di persone di cui si vuole fare la media "); //ho tolto ln dal print per fare input su stessa riga
+            System.out.print("Salve, inserisca il numero di persone di cui si vuole fare la media: "); //ho tolto ln dal print per fare input su stessa riga
             try 
             {
                 err = 0;
