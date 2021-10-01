@@ -1,4 +1,3 @@
-package ES1;
 import java.util.Scanner; //serve per importare librerie che contengono classi di oggetti
 
 /* --------------------------------
