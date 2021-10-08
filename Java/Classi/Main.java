@@ -25,7 +25,7 @@ public class Main
     */
     
 
-    boolean isEqual = auto2.;
+    boolean isEqual = auto.confronto(auto2);
 
     if (isEqual == true)
       System.out.println("Le auto sono uguali");
