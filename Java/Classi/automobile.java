@@ -17,6 +17,13 @@ public class Automobile
      this.stato=myStato;
      this.velocita=myVelocita;
    }
+
+   //costruttore di default
+   public Automobile()
+   {
+      //...
+   }
+
     /*costruttore
    public Automobile( int mystato, String mymarca, String mytarga , int mycavalli, int myvelocita)
    {
@@ -74,6 +81,14 @@ public class Automobile
     else
       System.out.println("io sono accesa");
     System.out.println("la mia velocita e' "+this.getVelocita()+" km/h");
-    
+  
+  }
+
+  public boolean confronto(Automobile auto)
+  {
+      if(this.targa == auto.getTarga() && this.marca == auto.getMarca() && this.cavalli == auto.getCavalli() && this.stato == auto.getStato() && this.velocita == auto.getVelocita())
+        return true;
+      else
+        return false;
   }
 }//fine classe 
