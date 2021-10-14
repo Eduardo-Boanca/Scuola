@@ -1,7 +1,8 @@
 
 // Add your code here
 
-let myName = 'Eduardo';
+let myName = 'Paul';
+myName = 'Eduardo';
 
 // Don't edit the code below here!
 
