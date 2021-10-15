@@ -168,7 +168,7 @@
 											"top": 312,
 											"width": 343,
 											"height": 13,
-											"text": "-nome: string",
+											"text": "-firstName: string",
 											"horizontalAlignment": 0
 										},
 										{
@@ -185,7 +185,7 @@
 											"top": 327,
 											"width": 343,
 											"height": 13,
-											"text": "-cognome: string",
+											"text": "-lastName: string",
 											"horizontalAlignment": 0
 										},
 										{
@@ -202,7 +202,7 @@
 											"top": 342,
 											"width": 343,
 											"height": 13,
-											"text": "-età: int",
+											"text": "-age: int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -214,6 +214,7 @@
 											"model": {
 												"$ref": "AAAAAAF8feOC1SmboBg="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 173,
 											"top": 357,
@@ -233,10 +234,27 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
+											"top": 357,
+											"width": 343,
+											"height": 13,
+											"text": "-height: float",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF8gEnKY2cLLoo=",
+											"_parent": {
+												"$ref": "AAAAAAF8fd9qGilT8Xw="
+											},
+											"model": {
+												"$ref": "AAAAAAF8gEnKNmcIZUc="
+											},
+											"font": "Arial;13;0",
+											"left": 173,
 											"top": 372,
 											"width": 343,
 											"height": 13,
-											"text": "-altezza: float",
+											"text": "-gender: string",
 											"horizontalAlignment": 0
 										}
 									],
@@ -270,7 +288,7 @@
 											"top": 395,
 											"width": 343,
 											"height": 13,
-											"text": "+setNome(nome)",
+											"text": "+setFirstName(String firstName)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -287,7 +305,7 @@
 											"top": 410,
 											"width": 343,
 											"height": 13,
-											"text": "+setCognome(cognome)",
+											"text": "+setLastName(String lastName)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -304,24 +322,7 @@
 											"top": 425,
 											"width": 343,
 											"height": 13,
-											"text": "+setEtà(età)",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAF8feO1Dym2Hr4=",
-											"_parent": {
-												"$ref": "AAAAAAF8fd9qGilUyVY="
-											},
-											"model": {
-												"$ref": "AAAAAAF8feO1BimzxhU="
-											},
-											"font": "Arial;13;0",
-											"left": 173,
-											"top": 440,
-											"width": 343,
-											"height": 13,
-											"text": "+setIndirizzo(indirizzo)",
+											"text": "+setAge(int age)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -335,10 +336,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 455,
+											"top": 440,
 											"width": 343,
 											"height": 13,
-											"text": "+setAltezza(altezza)",
+											"text": "+setHeight(double Height)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -352,10 +353,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 470,
+											"top": 455,
 											"width": 343,
 											"height": 13,
-											"text": "+getNome()",
+											"text": "+getFirstName()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -369,10 +370,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 485,
+											"top": 470,
 											"width": 343,
 											"height": 13,
-											"text": "+isCompleanno()",
+											"text": "+getLastName()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -386,10 +387,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
-											"top": 500,
+											"top": 485,
 											"width": 343,
 											"height": 13,
-											"text": "+isDormendo()",
+											"text": "+getAge()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -403,10 +404,78 @@
 											},
 											"font": "Arial;13;0",
 											"left": 173,
+											"top": 500,
+											"width": 343,
+											"height": 13,
+											"text": "+getHeight()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF8gF2+imcjENM=",
+											"_parent": {
+												"$ref": "AAAAAAF8fd9qGilUyVY="
+											},
+											"model": {
+												"$ref": "AAAAAAF8gF2+Zmcg090="
+											},
+											"font": "Arial;13;0",
+											"left": 173,
 											"top": 515,
 											"width": 343,
 											"height": 13,
-											"text": "+Operation4()",
+											"text": "+presentati()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF8gxwip2cqxEs=",
+											"_parent": {
+												"$ref": "AAAAAAF8fd9qGilUyVY="
+											},
+											"model": {
+												"$ref": "AAAAAAF8gxwijGcnqT4="
+											},
+											"font": "Arial;13;0",
+											"left": 173,
+											"top": 530,
+											"width": 343,
+											"height": 13,
+											"text": "+isDormendo()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF8gxxrJGcx0F4=",
+											"_parent": {
+												"$ref": "AAAAAAF8fd9qGilUyVY="
+											},
+											"model": {
+												"$ref": "AAAAAAF8gxxrFWcurc4="
+											},
+											"font": "Arial;13;0",
+											"left": 173,
+											"top": 545,
+											"width": 343,
+											"height": 13,
+											"text": "+setSleeping(boolean sleeping)",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF8gxzwimc68uM=",
+											"_parent": {
+												"$ref": "AAAAAAF8fd9qGilUyVY="
+											},
+											"model": {
+												"$ref": "AAAAAAF8gxzwYmc3JSY="
+											},
+											"font": "Arial;13;0",
+											"left": 173,
+											"top": 560,
+											"width": 343,
+											"height": 13,
+											"text": "+getSleeping()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -414,7 +483,7 @@
 									"left": 168,
 									"top": 390,
 									"width": 353,
-									"height": 143
+									"height": 188
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -494,7 +563,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "nome",
+							"name": "firstName",
 							"visibility": "private",
 							"type": "string"
 						},
@@ -504,7 +573,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "cognome",
+							"name": "lastName",
 							"visibility": "private",
 							"type": "string"
 						},
@@ -514,7 +583,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "età",
+							"name": "age",
 							"visibility": "private",
 							"type": "int"
 						},
@@ -534,9 +603,19 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "altezza",
+							"name": "height",
 							"visibility": "private",
 							"type": "float"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF8gEnKNmcIZUc=",
+							"_parent": {
+								"$ref": "AAAAAAF8fd9qGClLyEA="
+							},
+							"name": "gender",
+							"visibility": "private",
+							"type": "string"
 						}
 					],
 					"operations": [
@@ -546,8 +625,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "setNome",
-							"stereotype": "",
+							"name": "setFirstName",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -555,8 +633,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF8feD6Fyl+VJ0="
 									},
-									"name": "nome",
-									"type": ""
+									"name": "String firstName"
 								}
 							]
 						},
@@ -566,7 +643,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "setCognome",
+							"name": "setLastName",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -574,8 +651,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF8feOZ8ymnBjM="
 									},
-									"name": "cognome",
-									"type": ""
+									"name": "String lastName"
 								}
 							]
 						},
@@ -585,7 +661,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "setEtà",
+							"name": "setAge",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -593,27 +669,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF8feOowCmtd08="
 									},
-									"name": "età",
-									"type": ""
-								}
-							]
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAF8feO1BimzxhU=",
-							"_parent": {
-								"$ref": "AAAAAAF8fd9qGClLyEA="
-							},
-							"name": "setIndirizzo",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAF8fedCsSnaSHc=",
-									"_parent": {
-										"$ref": "AAAAAAF8feO1BimzxhU="
-									},
-									"name": "indirizzo",
-									"type": ""
+									"name": "int age"
 								}
 							]
 						},
@@ -623,7 +679,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "setAltezza",
+							"name": "setHeight",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -631,8 +687,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF8feO8qSm59S0="
 									},
-									"name": "altezza",
-									"type": ""
+									"name": "double Height"
 								}
 							]
 						},
@@ -642,7 +697,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "getNome"
+							"name": "getFirstName"
 						},
 						{
 							"_type": "UMLOperation",
@@ -650,7 +705,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "isCompleanno"
+							"name": "getLastName"
 						},
 						{
 							"_type": "UMLOperation",
@@ -658,7 +713,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "isDormendo"
+							"name": "getAge"
 						},
 						{
 							"_type": "UMLOperation",
@@ -666,7 +721,50 @@
 							"_parent": {
 								"$ref": "AAAAAAF8fd9qGClLyEA="
 							},
-							"name": "Operation4"
+							"name": "getHeight"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF8gF2+Zmcg090=",
+							"_parent": {
+								"$ref": "AAAAAAF8fd9qGClLyEA="
+							},
+							"name": "presentati"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF8gxwijGcnqT4=",
+							"_parent": {
+								"$ref": "AAAAAAF8fd9qGClLyEA="
+							},
+							"name": "isDormendo"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF8gxxrFWcurc4=",
+							"_parent": {
+								"$ref": "AAAAAAF8fd9qGClLyEA="
+							},
+							"name": "setSleeping",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF8gxys+Gc1Te0=",
+									"_parent": {
+										"$ref": "AAAAAAF8gxxrFWcurc4="
+									},
+									"name": "boolean sleeping",
+									"type": ""
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF8gxzwYmc3JSY=",
+							"_parent": {
+								"$ref": "AAAAAAF8fd9qGClLyEA="
+							},
+							"name": "getSleeping"
 						}
 					]
 				}

@@ -5,7 +5,7 @@ public class Person
   private String firstName, lastName, gender;
   private int age;
   private double height;
-
+  boolean sleeping;
   //costruttore di default
   public Person()
   {
@@ -13,13 +13,14 @@ public class Person
   }
 
   //costruttore
-  public Person(String myFirstName, String myLastName, String myGender, int myAge, double myHeight)
+  public Person(String myFirstName, String myLastName, String myGender, int myAge, double myHeight, boolean sleeping)
   {
     this.firstName = myFirstName;
     this.lastName = myLastName;
     this.gender = myGender;
     this.age = myAge;
     this.height = myHeight;
+    this.sleeping = sleeping;
   }
 
   public String getFirstName()
@@ -47,6 +48,11 @@ public class Person
     return this.height;
   }
 
+  public boolean getSleeping()
+  {
+    return this.sleeping;
+  }
+
   public void setFirstName(String firstName)// Metodo che valorizza l'attributo targa in base al parametro passato in input
   {
     this.firstName = firstName;
@@ -67,9 +73,14 @@ public class Person
     this.age = age;
   }
 
-  public void setHeight(double d)
+  public void setHeight(double height)
   {
-    this.height = d;
+    this.height = height;
+  }
+
+  public boolean setSleeping(boolean sleeping)
+  {
+    return this.sleeping = sleeping;
   }
 
 
@@ -79,8 +90,16 @@ public class Person
     System.out.println("Il mio nome è "+this.getFirstName());
     System.out.println("Il mio cognome è "+ this.getLastName());
     System.out.println("Sono un "+this.getGender());
-    System.out.println("Ho "+this.getAge() +"anni");
+    System.out.println("Ho "+this.getAge() + "anni");
     System.out.println("Sono alto "+this.getHeight() +"cm");
+  }
 
+  boolean isDormendo()
+  {
+    if(this.getSleeping() == true)
+      System.out.println("Ora sto dormendo");
+    else 
+      System.out.println("Ora non to dormendo");
+    return sleeping;
   }
 }//fine classe
