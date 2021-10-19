@@ -1,0 +1,58 @@
+body{
+    background-color: #1f58d3;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    font-size:15px;
+    }
+    
+    h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    span {
+    font-family: Arial, Helvetica, sans-serif
+    }
+    
+    p{
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    form {
+    /* Per centrare il form nella pagina */
+    margin: 0 auto;
+    width: 700px;
+    /* Contorno del form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    }
+    
+    label {
+    /* Grandezza e allineamento uniforme */
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+    }
+    
+    input[type=text] {
+    padding:7px; 
+    border:2px solid #ccc; 
+    width: 200px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    }
+    
+    input[type=text]:focus {
+    border-color:#333;
+    }
+    
+    input[type=button] {
+    padding:5px 15px; 
+    background: #CCC; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    }
+    

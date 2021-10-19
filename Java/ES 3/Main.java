@@ -11,9 +11,6 @@ public class Main
     auto2.setStato(1);
     auto2.setVelocita(300);
     
-    auto.presentati();
-    auto2.presentati();
-    
     if (auto.compareCar(auto,auto2)==true)
       
       System.out.println("Le due auto sono uguali");
