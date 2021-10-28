@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch MediaEta",
+            "request": "launch",
+            "mainClass": "MediaEta",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainPerson2",
+            "request": "launch",
+            "mainClass": "MainPerson2",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
