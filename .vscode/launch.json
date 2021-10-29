@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainPerson3",
+            "request": "launch",
+            "mainClass": "MainPerson3",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
             "name": "Launch MediaEta",
             "request": "launch",
             "mainClass": "MediaEta",

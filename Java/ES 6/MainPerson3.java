@@ -1,14 +1,14 @@
-public class MainPerson2 {
+public class MainPerson3 {
   public static void main(String[] args) {
-    Person2 person = new Person2("Eduardo", "Boanca", "maschio", 17, 1.75, false);
-    Person2 person2 = new Person2("Nicole", "Bianchi", "femmina", 17, 1.67, false);
-    Person2 person3 = new Person2(person);
+    Person3 person = new Person3("Eduardo", "Boanca", "maschio", 17, 1.75, false);
+    Person3 person2 = new Person3("Nicole", "Bianchi", "femmina", 17, 1.67, false);
+    Person3 person3 = new Person3(person);
     DataN date1 = new DataN("30", "11", "2003");
-    DataN date2 = new DataN("21", "Gennaio", "2003");
+    DataN date2 = new DataN("21", "gennaiu", "2003");
 
-    person.presentati();
-    person2.presentati();
-    person3.presentati();
+    // person.presentati();
+    // person2.presentati();
+    // person3.presentati();
 
     if (date1.checkDate())
       System.out.println("La data1 è giusta");

@@ -1,5 +1,3 @@
-import java.io.*;
-
 public class DataN {
 
     private String day;
@@ -33,7 +31,7 @@ public class DataN {
         int gg, mm, aaaa;
         boolean correct;
         
-        int[] macxDays = {31,29,31,30,31,30,31,31,30,31,30,31};
+        int[] maxDays = {31,29,31,30,31,30,31,31,30,31,30,31};
         correct = true;
         gg = 0;
         mm = 0;
@@ -104,7 +102,7 @@ public class DataN {
                         correct = false;
                 }
                 else
-                    if(gg > maxDays[mm+1])
+                    if(gg > maxDays[mm-1])
                         correct = false;
             }
             else 

@@ -1,4 +1,4 @@
-public class Person2
+public class Person3
 {//inizio classe
 
   //attributi
@@ -7,12 +7,12 @@ public class Person2
   private double height;
   boolean sleeping;
   
-  public Person2()
+  public Person3()
   {
 
   }
 
-  public Person2(Person2 person)
+  public Person3(Person3 person)
   {
     this.firstName = person.getFirstName();
     this.lastName = person.getLastName();
@@ -23,7 +23,7 @@ public class Person2
   }
 
   //costruttore
-  public Person2(String myFirstName, String myLastName, String myGender, int myAge, double myHeight, boolean sleeping)
+  public Person3(String myFirstName, String myLastName, String myGender, int myAge, double myHeight, boolean sleeping)
   {
     this.firstName = myFirstName;
     this.lastName = myLastName;
@@ -113,7 +113,7 @@ public class Person2
     return sleeping;
   }
 
-  public boolean isEqual(Person2 person)
+  public boolean isEqual(Person3 person)
   {
     if(this.firstName.equals(person.getFirstName()) && this.lastName.equals(person.getLastName()) && this.gender.equals(person.getGender()) && this.age == person.getAge() && this.height == person.getHeight())
       return true;
@@ -121,7 +121,7 @@ public class Person2
       return false;
   }
 
-  public int compareTo(Person2 person)
+  public int compareTo(Person3 person)
   {
     if(this.lastName.compareTo(person.getLastName())!=0)
       if(this.lastName.compareTo(person.getLastName())<0)

@@ -2,8 +2,8 @@ public class MainPerson
 {
   public static void main(String[] args)
   {
-    Person2 person = new Person2("Eduardo", "Boanca", "maschio", 17, 1.75, false);
-    Person2 person2 = new Person2();
+    Person3 person = new Person3("Eduardo", "Boanca", "maschio", 17, 1.75, false);
+    Person3 person2 = new Person3();
     person.presentati();
     person.isDormendo();
     person2.setFirstName("Alice");
