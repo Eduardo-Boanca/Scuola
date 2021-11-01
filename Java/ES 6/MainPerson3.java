@@ -1,24 +1,50 @@
 public class MainPerson3 {
   public static void main(String[] args) {
-    Person3 person = new Person3("Eduardo", "Boanca", "maschio", 17, 1.75, false);
-    Person3 person2 = new Person3("Nicole", "Bianchi", "femmina", 17, 1.67, false);
-    Person3 person3 = new Person3(person);
+
     DataN date1 = new DataN("30", "11", "2003");
-    DataN date2 = new DataN("21", "gennaiu", "2003");
+    DataN date2 = new DataN("28", "2", "2001");
+    DataN date3 = new DataN("13", "2", "1997");
+    Person3 person = new Person3("Eduardo", "Boanca", "maschio", 17, 1.75, false, date1);
+    Person3 person2 = new Person3("Nicole", "Bianchi", "femmina", 17, 1.67, false, date2);
+    Person3 person3 = new Person3("Pietro", "Salvo", "maschio", 20, 1.67, false, date3);
+    // Person3 person3 = new Person3(person);
 
     // person.presentati();
+    // System.out.println("\n");
     // person2.presentati();
+    // System.out.println("\n");
     // person3.presentati();
+    // System.out.println("\n");
 
-    if (date1.checkDate())
-      System.out.println("La data1 è giusta");
+    if (person.isMaggiorenne() == true)
+      System.out.println("La persona è maggiorenne");
     else
-      System.out.println("La data1 è sbagliata");
+      System.out.println("La persona è minorenne");
 
-    if (date2.checkDate())
-      System.out.println("La data2 è giusta");
+    if (person2.isMaggiorenne() == true)
+      System.out.println("La persona è maggiorenne");
     else
-      System.out.println("La data2 è sbagliata");
+      System.out.println("La persona è minorenne");
+
+    if (person3.isMaggiorenne() == true)
+      System.out.println("La persona è maggiorenne");
+    else
+      System.out.println("La persona è minorenne");
+
+    // if (date1.checkDate())
+    // System.out.println("La data1 è giusta");
+    // else
+    // System.out.println("La data1 è sbagliata");
+
+    // if (date2.checkDate())
+    // System.out.println("La data2 è giusta");
+    // else
+    // System.out.println("La data2 è sbagliata");
+
+    // if (date3.checkDate())
+    // System.out.println("La data2 è giusta");
+    // else
+    // System.out.println("La data2 è sbagliata");
 
     // if(person.equals(person2))
     // System.out.println("La prima persona è uguale alla seconda persona");

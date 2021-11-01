@@ -1,3 +1,7 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
+
 public class Person3
 {//inizio classe
 
@@ -6,6 +10,7 @@ public class Person3
   private int age;
   private double height;
   boolean sleeping;
+  private DataN dataNascita;
   
   public Person3()
   {
@@ -20,17 +25,19 @@ public class Person3
     this.age = person.getAge();
     this.height = person.getHeight();
     this.sleeping = person.getSleeping();
+    this.dataNascita = person.getDataNascita();
   }
 
   //costruttore
-  public Person3(String myFirstName, String myLastName, String myGender, int myAge, double myHeight, boolean sleeping)
+  public Person3(String myFirstName, String myLastName, String myGender, int myAge, double myHeight, boolean MySleeping, DataN MyDataNascita)
   {
     this.firstName = myFirstName;
     this.lastName = myLastName;
     this.gender = myGender;
     this.age = myAge;
     this.height = myHeight;
-    this.sleeping = sleeping;
+    this.sleeping = MySleeping;
+    this.dataNascita = MyDataNascita;
   }
 
   public String getFirstName()
@@ -63,6 +70,12 @@ public class Person3
     return this.sleeping;
   }
 
+  public DataN getDataNascita() 
+  {
+    return this.dataNascita;
+  }
+
+
   public void setFirstName(String firstName)// Metodo che valorizza l'attributo targa in base al parametro passato in input
   {
     this.firstName = firstName;
@@ -93,6 +106,12 @@ public class Person3
     return this.sleeping = sleeping;
   }
 
+  public void setDataNascita (DataN dataNascita)
+  {
+    this.dataNascita = dataNascita;
+  }
+
+
 
   //metodi
   void presentati()
@@ -102,6 +121,7 @@ public class Person3
     System.out.println("Sono un "+this.getGender());
     System.out.println("Ho "+this.getAge() + " anni");
     System.out.println("Sono alto "+this.getHeight() +"cm");
+    System.out.println("Sono nato il "+this.getDataNascita().toString());
   }
 
   boolean isDormendo()
@@ -136,6 +156,42 @@ public class Person3
           return -1;
         else
           return 1;
-
   }
+
+  public boolean isMaggiorenne() {
+    //int compleanno = Integer.valueOf(getDataNascita());
+    int mese = Integer.valueOf(getDataNascita().getMonth());
+    int giorno = Integer.valueOf(getDataNascita().getDay());
+    int anno = Integer.valueOf(getDataNascita().getYear());
+    LocalDate today = LocalDate.now();
+    LocalDate birthday = LocalDate.of(anno, mese, giorno);
+
+    Period periodo = Period.between(birthday, today);
+    long totalDays = ChronoUnit.DAYS.between(birthday, today);
+    System.out.println("Tu hai " + periodo.getYears() + " anni, " + periodo.getMonths() + " mesi, e " + periodo.getDays() + " giorni. (" + totalDays + " giorni totali)");
+    
+    if(periodo.getYears() >= 18)
+        return true;
+    else
+        return false;
+}
+
+// public int olderThan(Person3 person)
+// {
+//   if(this.day.compareTo(person.getDay())!=0)
+//       if(this.lastName.compareTo(person.getLastName())<0)
+//         return -1;
+//       else
+//         return 1;
+//     else
+//       if(this.firstName.compareTo(person.getFirstName())==0)
+//         return 0;
+//       else
+//         if(this.firstName.compareTo(person.getFirstName())<0)
+//           return -1;
+//         else
+//           return 1;
+// }
+
+
 }//fine classe
