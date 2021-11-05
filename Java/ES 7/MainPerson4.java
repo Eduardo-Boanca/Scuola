@@ -1,20 +1,22 @@
-public class MainPerson3 {
-  public static void main(String[] args) {
+import java.text.ParseException;
 
-    DataN date1 = new DataN("30", "11", "2003");
-    DataN date2 = new DataN("23", "10", "2006");
-    DataN date3 = new DataN("13", "2", "1997");
+public class MainPerson4 {
+  public static void main(String[] args) throws ParseException {
+
+    DataN date1 = new DataN("29", "11", "2003");
+    DataN date2 = new DataN("30", "1", "2004");
+    DataN date3 = new DataN("30", "11", "2003");
     Person4 person = new Person4("Eduardo", "Boanca", "maschio", 17, 1.75, false, date1);
     Person4 person2 = new Person4("Nicole", "Bianchi", "femmina", 17, 1.67, false, date2);
     Person4 person3 = new Person4("Pietro", "Salvo", "maschio", 20, 1.67, false, date3);
     // Person3 person3 = new Person3(person);
 
-    // person.presentati();
-    // System.out.println("\n");
-    // person2.presentati();
-    // System.out.println("\n");
-    // person3.presentati();
-    // System.out.println("\n");
+    person.presentati();
+    System.out.println("\n");
+    person2.presentati();
+    System.out.println("\n");
+    person3.presentati();
+    System.out.println("\n");
 
     if (person.isMaggiorenne() == true)
       System.out.println("La persona è maggiorenne");
@@ -31,7 +33,8 @@ public class MainPerson3 {
     else
       System.out.println("La persona è minorenne");
 
-    person.olderThan(person2);
+    person3.olderThan(person2);
+
 
     // if (date1.checkDate())
     // System.out.println("La data1 è giusta");

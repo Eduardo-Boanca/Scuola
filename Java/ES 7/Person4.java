@@ -1,9 +1,11 @@
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-public class Person3 {// inizio classe
+public class Person4 {// inizio classe
 
   // attributi
   private String firstName, lastName, gender;
@@ -12,11 +14,11 @@ public class Person3 {// inizio classe
   boolean sleeping;
   private DataN dataNascita;
 
-  public Person3() {
+  public Person4() {
 
   }
 
-  public Person3(Person3 person) {
+  public Person4(Person4 person) {
     this.firstName = person.getFirstName();
     this.lastName = person.getLastName();
     this.gender = person.getGender();
@@ -27,7 +29,7 @@ public class Person3 {// inizio classe
   }
 
   // costruttore
-  public Person3(String myFirstName, String myLastName, String myGender, int myAge, double myHeight, boolean MySleeping,
+  public Person4(String myFirstName, String myLastName, String myGender, int myAge, double myHeight, boolean MySleeping,
       DataN MyDataNascita) {
     this.firstName = myFirstName;
     this.lastName = myLastName;
@@ -116,7 +118,7 @@ public class Person3 {// inizio classe
     return sleeping;
   }
 
-  public boolean isEqual(Person3 person) {
+  public boolean isEqual(Person4 person) {
     if (this.firstName.equals(person.getFirstName()) && this.lastName.equals(person.getLastName())
         && this.gender.equals(person.getGender()) && this.age == person.getAge() && this.height == person.getHeight())
       return true;
@@ -124,7 +126,7 @@ public class Person3 {// inizio classe
       return false;
   }
 
-  public int compareTo(Person3 person) {
+  public int compareTo(Person4 person) {
     if (this.lastName.compareTo(person.getLastName()) != 0)
       if (this.lastName.compareTo(person.getLastName()) < 0)
         return -1;
@@ -158,7 +160,7 @@ public class Person3 {// inizio classe
   }
 
 
-  public int olderThan(Person3 person2) {
+  public int olderThan(Person4 person2) {
     int result = 0;
     String birth = this.dataNascita.toString();
     String birth2 = person2.dataNascita.toString();
@@ -171,6 +173,7 @@ public class Person3 {// inizio classe
       System.out.println("La prima persona è più giovane");
     return result;
   }
+
 
 
 }// fine classe
