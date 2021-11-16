@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>JavaScript program to convert Kilometer to Miles</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+</head>
+
+<body>
+
+    <h2>JavaScript program to convert Kilometer to Miles and viceversa</h2>
+    <br>
+    <div class="form-group">
+        <label for="convert">
+            <h4>Converter</h4>
+        </label>
+        <input type="number" min="0" value="1" id="converter" placeholder="" oninput="converter(this.value)"
+            onchange="converter(this.value)">
+        <small id="helpId" class="text-muted">Enter in kilometers</small>
+        <label for="km">Km</label><input id="km" type="radio" name="kmmiles" value="km">
+        <label for="miles">Miles</label><input id="miles" type="radio" name="kmmiles" value="miles">
+    </div>
+    <div class="form-group">
+        <h5>Result:<span id="res"></span></h5>
+    </div>
+    <div class="form-group">
+        <button class="convert">Convert</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

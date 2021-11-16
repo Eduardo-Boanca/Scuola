@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch MainPerson5",
+            "request": "launch",
+            "mainClass": "MainPerson5",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainPerson4",
+            "request": "launch",
+            "mainClass": "MainPerson4",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainPerson3",
+            "request": "launch",
+            "mainClass": "MainPerson3",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
+            "name": "Launch MediaEta",
+            "request": "launch",
+            "mainClass": "MediaEta",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainPerson2",
+            "request": "launch",
+            "mainClass": "MainPerson2",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
