@@ -1,38 +1,21 @@
-var bold = document.getElementById('grassetto');
-var underline = document.getElementById('sottolineato');
-var italic = document.getElementById('corsivo');
-var title = document.getElementById('title')
+let question1 = documentGetElementById('q1');
+let question2 = documentGetElementById('q2');
+let question3 = documentGetElementById('q3');
+let BtnEle = document.querySelector(".Btn");
+let resEle = document.querySelector(".risposta");
 
-function cambiaTesto() {
+BtnEle.onclick = isChecked();
 
-    if (bold.checked) {
-        title.style.fontWeight = 'bold';
-    } else {
-        title.style.fontWeight = 'normal';
+function isChecked() {
+
+    if (question1.checked == true) {
+        resEle.innerHTML = "Risposta Corretta!";
     }
 
-    if (underline.checked) {
-        title.style.textDecoration = 'underline';
-    } else {
-        title.style.textDecoration = 'none';
+    if (question2.checked == true || question3.checked == true) {
+        resEle.innerHTML = "Risposta Sbagliata!";
     }
-
-    if (italic.checked) {
-        title.style.fontStyle = 'italic';
-    } else {
-        title.style.fontStyle = 'normal';
-    }
-
-    }
+}
 
 
 
-    function reverseString(){
-        var str = document.getElementById('reversTheName').value;
-        var newString="";
-     
-        for(var i=str.length-1; i>=0; i--){
-         newString += str[i];
-        }
-        document.getElementById('showData').value = newString;
-       }

@@ -29,6 +29,18 @@ public class DataN {
         return this.year;
     }
 
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
     public String toString() {
         String dn = "";
         dn += this.day + "/";
@@ -116,9 +128,8 @@ public class DataN {
         return correct;
     }
 
-    public void setDataNascita(String readLine) {
-        
-    }
+
+    
 
 
 

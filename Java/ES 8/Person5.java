@@ -101,13 +101,15 @@ public class Person5 {// inizio classe
   }
 
   // metodi
-  void presentati() {
-    System.out.println("Il mio nome è " + this.getFirstName());
-    System.out.println("Il mio cognome è " + this.getLastName());
-    System.out.println("Sono un " + this.getGender());
-    System.out.println("Ho " + this.getAge() + " anni");
-    System.out.println("Sono alto " + this.getHeight() + "cm");
-    System.out.println("Sono nato il " + this.getDataNascita().toString());
+  public String presentati() {
+    String str = "";
+    str += "Il mio nome è " + this.getFirstName();
+    str += "Il mio cognome è " + this.getLastName();
+    str += "Sono un " + this.getGender();
+    str += "Ho " + this.getAge() + " anni";
+    str += "Sono alto " + this.getHeight() + "cm";
+    str += "Sono nato il " + this.getDataNascita().toString();
+    return str;
   }
 
   boolean isDormendo() {
