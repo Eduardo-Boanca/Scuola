@@ -76,7 +76,7 @@ public class ElencoPerson5 {
     this.elenco[posizione - 1] = person;
   }
 
-  public void deletePerson(int numeroPersona) {
+  public void deletePerson(int numeroPersona, Person5 person) {
     Person5 person = new Person5();
 
   }

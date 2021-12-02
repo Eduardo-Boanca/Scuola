@@ -49,6 +49,6 @@ input[type=checkbox]:checked:after {
     left: 6px;
 }
 
-#submit {
+.Btn {
     margin-top: 20px;
 }

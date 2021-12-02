@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainAereo",
+            "request": "launch",
+            "mainClass": "MainAereo",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestNoleggioAuto",
+            "request": "launch",
+            "mainClass": "TestNoleggioAuto",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
             "name": "Launch MainPerson5",
             "request": "launch",
             "mainClass": "MainPerson5",
