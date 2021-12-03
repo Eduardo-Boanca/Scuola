@@ -9,6 +9,14 @@ public class AereoDiLinea extends Aereo{
         this.passeggeri = myPasseggeri;
     }
 
+    //costruttore di copia
+    public AereoDiLinea(AereoDiLinea a2)
+    {
+        super(a2.getModello(), a2.getMarca(), a2.getAnno());
+        this.compagnia = a2.getCompagnia();
+        this.passeggeri = a2.getPasseggeri();
+    }
+
     public String getCompagnia()
     {
         return this.compagnia;
@@ -20,7 +28,7 @@ public class AereoDiLinea extends Aereo{
     }
 
     public String emergenza() {
-        return "Indossare le mascherine per l'ossigneno.";
+        return "Indossare le mascherine per l'ossigeno.";
     }
 
     @Override

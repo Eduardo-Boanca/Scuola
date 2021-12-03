@@ -10,6 +10,13 @@ public class Aereo {
         this.anno = myAnno;
     }
 
+    public Aereo(Aereo a1)
+    {
+        this.modello = a1.getModello();
+        this.marca = a1.getMarca();
+        this.anno = a1.getAnno();
+    }
+
     public String getModello() {
         return this.modello;
     }

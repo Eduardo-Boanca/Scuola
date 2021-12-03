@@ -36,9 +36,12 @@ public class MainPerson5 {
     // DataN date1 = new DataN("29", "11", "2003");
     // DataN date2 = new DataN("30", "1", "2004");
     // DataN date3 = new DataN("30", "11", "2003");
-    // Person5 person = new Person5("Eduardo", "Boanca", "maschio", 17, "1.75", false, date1);
-    // Person5 person2 = new Person5("Nicole", "Bianchi", "femmina", 17, "1.67", false, date2);
-    // Person5 person3 = new Person5("Pietro", "Salvo", "maschio", 20, "1.67", false, date3);
+    // Person5 person = new Person5("Eduardo", "Boanca", "maschio", 17, "1.75",
+    // false, date1);
+    // Person5 person2 = new Person5("Nicole", "Bianchi", "femmina", 17, "1.67",
+    // false, date2);
+    // Person5 person3 = new Person5("Pietro", "Salvo", "maschio", 20, "1.67",
+    // false, date3);
     // // Person3 person3 = new Person3(person);
     // ElencoPerson5 lista = new ElencoPerson5(30);
     BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
@@ -50,45 +53,42 @@ public class MainPerson5 {
     do {
       scelta = menu();
       switch (scelta) {
-      case 1:
-      try {
-        System.out.println("Inserisci il nome della persona");
-        person.setFirstName(tastiera.readLine());
-        System.out.println("Inserisci il cognome della persona");
-        person.setLastName(tastiera.readLine());
-        System.out.println("Inserisci il sesso della persona");
-        person.setGender(tastiera.readLine());
-        System.out.println("Inserisci l'altezza della persona (es 1.75)");
-        person.setHeight(tastiera.readLine());
-        System.out.println("Inserisci il giorno di nascita della persona");
-        dataNascitaTMP.setDay(tastiera.readLine());
-        System.out.println("Inserisci il mese di nascita della persona");
-        dataNascitaTMP.setMonth(tastiera.readLine());
-        System.out.println("Inserisci l'ann di nascita della persona");
-        dataNascitaTMP.setYear(tastiera.readLine());
+        case 1:
+          try {
+            System.out.println("Inserisci il nome della persona");
+            person.setFirstName(tastiera.readLine());
+            System.out.println("Inserisci il cognome della persona");
+            person.setLastName(tastiera.readLine());
+            System.out.println("Inserisci il sesso della persona");
+            person.setGender(tastiera.readLine());
+            System.out.println("Inserisci l'altezza della persona (es 1.75)");
+            person.setHeight(tastiera.readLine());
+            System.out.println("Inserisci il giorno di nascita della persona");
+            dataNascitaTMP.setDay(tastiera.readLine());
+            System.out.println("Inserisci il mese di nascita della persona");
+            dataNascitaTMP.setMonth(tastiera.readLine());
+            System.out.println("Inserisci l'ann di nascita della persona");
+            dataNascitaTMP.setYear(tastiera.readLine());
 
-      } catch (Exception e) {
-        System.out.println("\nReinserisci i valori, quelli impostati non sono corretti");
-      }
+          } catch (Exception e) {
+            System.out.println("\nReinserisci i valori, quelli impostati non sono corretti");
+          }
 
-      if(elenco.addPerson(person)==0)
-      {
-        System.out.println("Persona aggiunta con successo!");
-      }
-      else
-      {
-        System.out.println("Il vettore e' pieno!");
-      }
-        break;
-      case 2:
-        elenco.completeList();
-        break;
-      case 3:
-        
-        break;
-      case 4:
-        
-        break;
+          if (elenco.addPerson(person) == 0) {
+            System.out.println("Persona aggiunta con successo!");
+          } else {
+            System.out.println("Il vettore e' pieno!");
+          }
+          break;
+        case 2:
+          elenco.completeList();
+          break;
+        case 3:
+
+          break;
+        case 4:
+
+          break;
       }
     } while (scelta != 5);
 

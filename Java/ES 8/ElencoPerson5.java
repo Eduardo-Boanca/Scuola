@@ -76,8 +76,11 @@ public class ElencoPerson5 {
     this.elenco[posizione - 1] = person;
   }
 
-  public void deletePerson(int numeroPersona, Person5 person) {
+  public void deletePerson(int numeroPersona, int i) {
     Person5 person = new Person5();
+    person.setFirstName("");
+    this.elenco[i-1] = person;
+    this.firstPosition = i-1;
 
   }
 }
