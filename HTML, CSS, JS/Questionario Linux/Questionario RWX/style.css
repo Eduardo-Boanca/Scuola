@@ -1,0 +1,100 @@
+* {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    background-color: #1f58d3;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+hr {
+    width: 50%;
+    margin: 20px auto;
+}
+
+#input_div {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+}
+
+label {
+    margin-top: 20px;
+}
+
+.input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 10%;
+    margin: 0 auto;
+}
+
+#code {
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+#Verifica {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    border: solid 1px black;
+    margin:20px  auto;
+    border-radius: 10px;
+}
+
+
+#new_code {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    border: solid 1px black;
+    margin:20px  auto;
+    border-radius: 10px;
+}
+
+#Corretto {
+    text-align: center;
+}
+
+input[type=text] {
+    padding:7px; 
+    border:2px solid #ccc; 
+    width: 200px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    }
+    
+input[type=text]:focus {
+    border-color:#333;
+    }
+    
+input[type=button] {
+    padding:5px 15px; 
+    background: #CCC; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    }

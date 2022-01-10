@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Linux Quiz 4</title>
+    <link href="/HTML, CSS, JS/Questionario Linux/Questionario RWX/style.css" rel="stylesheet" type="text/css" />
+    <script src="/HTML, CSS, JS/Questionario Linux/Questionario RWX/script.js" defer></script>
+</head>
+
+<body>
+    <h1>
+        Guess The Permission
+    </h1>
+    <h3>
+        In questo quiz dovrai indovinare la sequenza letterale (rwx) del codice mostrato.
+    </h3>
+    <hr>
+
+    <div id="code"></div>
+    <div id="container">
+        <div id="input_div">
+            <input id="Risposta" type="text" class="input" required><br>
+            <label>Risposta</label>
+        </div>
+
+        <div class="buttons">
+            <button id="Verifica" type="button" href="#" onclick="VerificaRisposta()">Verifica</button>
+            <button id="new_code" onClick="window.location.reload();">Genera nuovo codice</button>
+        </div>
+    </div>
+
+
+
+    <div id="Sbagliato">
+
+    </div>
+
+    <br>
+
+    <div id="Corretto">
+        <p class="Testo">
+        <h2>Complimenti, la risposta è corretta.</h2>
+        </p>
+    </div>
+
+
+
+</body>
+
+</html>

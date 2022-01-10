@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "VERIFICA DI INFORMATICA",
+        "Java/Punto",
         "Java/ES 8",
         "Java/ES 7",
         "Java/ES 6",
@@ -9,6 +10,6 @@
         "Java/ES 3",
         "Java/ES 2",
         "Java/Aereo Militare",
-        "Java/Punto"
+        "Java/Figure"
     ]
 }
