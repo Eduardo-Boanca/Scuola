@@ -1,62 +1,67 @@
-const risp = document.querySelector('#Risposta');
+const risp = document.getElementById('risposta');
 const codice = document.querySelector('#code');
-const correct = document.querySelector('#Corretto');
-const reset = document.querySelector('#Resetta');
-const container = document.querySelector('#container')
-const input = document.querySelector('#input_div')
+const correct = document.getElementById('correct');
+const reset = document.getElementById('Resetta');
+const container = document.getElementById('container');
+const input = document.getElementById('input_div');
+const btn = document.getElementById('verify');
+const err = document.getElementById('error');
 
 correct.style.display = "none"
+err.style.display = "none"
 
-let contenitore = [];
-while (contenitore.length < 3) {
+var contNumeri = [];
+while (contNumeri.length < 3) {
     const random = Math.floor(Math.random() * 8);
-    if (contenitore.indexOf(random) === -1)
-        contenitore.push(random);
+    if (contNumeri.indexOf(random) === -1)
+        contNumeri.push(random);
 }
 
-codice.innerHTML = contenitore.join('');
+codice.innerHTML = contNumeri.join('');
 
 
-function rwxCode(code, ans) {
-    let tmpCodice = '';
+function rwxCode(code, answer) {
+    //const cod = cod_.split('');
     let codice = '';
 
     for (i = 0; i < 3; i++) {
-        tmpCodice = '';
+        let = tmp_code = '';
         for (j = 2; j != -1; j--) {
             if (code[i] >= Math.pow(2, j)) {
                 switch (j) {
                     case 0:
-                        tmpCodice += 'x';
+                        tmp_code += 'x';
                         break;
 
                     case 1:
-                        tmpCodice += 'w';
+                        tmp_code += 'w';
                         break;
 
                     case 2:
-                        tmpCodice += 'r';
+                        tmp_code += 'r';
                         break;
                 }
 
                 code[i] -= Math.pow(2, j);
             }
             else
-                tmpCodice += '-';
+                tmp_code += '-';
         }
 
-        codice += tmpCodice;
+        codice += tmp_code;
     }
-    return ans == codice;
+    return answer == codice;
 }
 
-function VerificaRisposta() {
-    if (rwxCode(arr, risp.value) == true) {
+function verify_code() {
+
+    if (rwxCode(contNumeri, risp.value) == true) {
         risp.style.color = "green";
-        correct.style.display = "inline-block"
+        correct.style.display = "inline";
     }
     else {
         highlight();
+        err.style.display = "inline";
     }
 }
 
@@ -67,5 +72,9 @@ function highlight() {
         risp.style.color = orig;
     }, 3000);
 }
+
+btn.addEventListener('click', verify_code);
+
+
 
 

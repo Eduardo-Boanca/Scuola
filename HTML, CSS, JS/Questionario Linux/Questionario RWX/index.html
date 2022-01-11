@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width">
     <title>Linux Quiz 4</title>
     <link href="/HTML, CSS, JS/Questionario Linux/Questionario RWX/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script src="/HTML, CSS, JS/Questionario Linux/Questionario RWX/script.js" defer></script>
 </head>
 
@@ -18,31 +23,27 @@
     </h3>
     <hr>
 
-    <div id="code"></div>
+
     <div id="container">
-        <div id="input_div">
-            <input id="Risposta" type="text" class="input" required><br>
-            <label>Risposta</label>
+        <div id="code"></div>
+        <div class="content">
+            <div id="input_div">
+                <input id="risposta" type="text" class="input" required placeholder="Risposta"><br>
+            </div>
+            <div class="buttons">
+                <button class="btn" id="verify" type="button">Verifica</button>
+                <button class="btn" id="new_code" onClick="window.location.reload();">Genera nuovo codice</button>
+            </div>
         </div>
-
-        <div class="buttons">
-            <button id="Verifica" type="button" href="#" onclick="VerificaRisposta()">Verifica</button>
-            <button id="new_code" onClick="window.location.reload();">Genera nuovo codice</button>
-        </div>
-    </div>
-
-
-
-    <div id="Sbagliato">
 
     </div>
 
-    <br>
+    <div id="error">
+        <p>Mi dispiace, la risposta è sbagliata</p>
+    </div>
 
-    <div id="Corretto">
-        <p class="Testo">
-        <h2>Complimenti, la risposta è corretta.</h2>
-        </p>
+    <div id="correct">
+        <p>Complimenti, la risposta è corretta.</p>
     </div>
 
 
