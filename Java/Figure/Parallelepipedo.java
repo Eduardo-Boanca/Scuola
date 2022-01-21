@@ -57,11 +57,4 @@ class Parallelepipedo extends Punto3D {
                 + "\n" + " Volume: " + getVolume());
     }
 
-    public boolean equals(Parallelepipedo oggetto) {
-        boolean equals = true;
-        if (!(this.larghezza == oggetto.getLarghezza() && this.lunghezza == oggetto.getLunghezza()
-                && this.altezza == oggetto.getAltezza() && super.equals(oggetto)))
-            equals = false;
-        return equals;
-    }
 }

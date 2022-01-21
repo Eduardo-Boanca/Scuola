@@ -13,25 +13,26 @@ class Cerchio extends Punto {
         this.raggio = getRaggio();
     }
 
-    public void setRaggio(int raggio) {
-        this.raggio = raggio;
-    }
-
     public int getRaggio() {
         return this.raggio;
     }
 
+    public void setRaggio(int raggio) {
+        this.raggio = raggio;
+    }
+
     public double getPerimetro() {
-        return this.raggio * 2 * Math.PI;
+        return Math.round(this.raggio * 2 * Math.PI, 3);
     }
 
     public double getArea() {
         return Math.PI * Math.pow(this.raggio, 2);
     }
 
+
     public void presentati() {
         System.out.println("Sono un cerchio");
-        System.out.println(" Il punto centrale si trova:" + "\n" + "  X=" + this.getX() + "\n" + "  Y=" + this.getY()
+        System.out.println(" Il punto centrale si trova:" + "\n" + "X=" + this.getX() + "\n" + "Y=" + this.getY()
                 + "\n" + " Raggio: " + this.raggio + "\n" + " Perimetro: " + this.getPerimetro() + "\n" + " Area: "
                 + this.getArea());
     }

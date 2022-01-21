@@ -11,13 +11,15 @@ class Cubo extends Punto3D {
         this.lato = getLato();
     }
 
+      public int getLato() {
+        return this.lato;
+    }
+    
     public void setLato(int lato) {
         this.lato = lato;
     }
 
-    public int getLato() {
-        return this.lato;
-    }
+
 
     public double getSuperficie() {
         return this.lato * this.lato * 6;
@@ -34,10 +36,4 @@ class Cubo extends Punto3D {
                 + " Area: " + this.getVolume());
     }
 
-    public boolean equals(Cubo oggetto) {
-        boolean equals = true;
-        if (!(this.lato == oggetto.getLato() && super.equals(oggetto)))
-            equals = false;
-        return equals;
-    }
 }

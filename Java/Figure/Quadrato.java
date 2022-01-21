@@ -40,6 +40,7 @@ class Quadrato extends Punto
         System.out.println(" Punto centrale in posizione:"+"\n"+"  X="+this.getX()+"\n"+"  Y="+this.getY()+"\n"+" Dimensione lato: "+this.lato+"\n"+" Perimetro: "+this.getPerimetro()+"\n"+" Area: "+this.getArea());
     }
 
+/*
     public boolean equals(Quadrato oggetto)
     {
         boolean equals = true;
@@ -47,6 +48,7 @@ class Quadrato extends Punto
             equals = false;
         return equals;
     }
+*/
 
     public void disegna()
     {

@@ -9,14 +9,19 @@ class Punto
         this.y=y;
     }
 
+    public int getX()
+    {
+        return this.x;
+    }
+    
     public void setX(int x)
     {
         this.x = x;
     }
     
-    public int getX()
+    public int getY()
     {
-        return this.x;
+        return this.y;
     }
 
     public void setY(int y)
@@ -24,10 +29,7 @@ class Punto
         this.y = y;
     }
 
-    public int getY()
-    {
-        return this.y;
-    }
+
 
     public void muovi(int x, int y)
     {
@@ -37,7 +39,7 @@ class Punto
 
     public void presentati()
     {
-        System.out.println("Sono un punto in posizione \n X: "+this.x+"\n"+" Y: "+this.y);
+        System.out.println("Punto in posizione \n X: "+this.x+"\n"+" Y: "+this.y);
     }
 
     public double getDistance(Punto object)
@@ -47,19 +49,14 @@ class Punto
 
     public void disegna()
     {
-        for(int i=0;i<y;i++)
+        for(int i = 0;i < y;i++)
             System.out.println();
-        for(int j=0;j<x;j++)
+        
+        for(int j = 0;j < x; j++)
             System.out.print(" ");
+        
         System.out.print("*");
         System.out.println();
     }
 
-    public boolean equals(Punto oggetto)
-    {
-        boolean equals = true;
-        if(!(this.x==oggetto.getX()&&this.y==oggetto.getY()))
-            equals = false;
-        return equals;
-    }
 }

@@ -34,7 +34,7 @@ class Sfera extends Punto3D
     public double getVolume()
     {
         return (4 * Math.PI * Math.pow(this.raggio,3)) / 3;
-        // return (4 / 3) * Math.PI * Math.pow(this.raggio,3);
+    
     }
 
     public double getArea() {
@@ -47,13 +47,6 @@ class Sfera extends Punto3D
         System.out.println(" Punto centrale in posizione:"+"\n"+"  X="+this.getX()+"\n"+"  Y="+this.getY()+"\n"+"  Z="+this.getZ()+"\n"+" Raggio: "+this.raggio+"\n"+" Superficie: "+this.getSuperficie()+"\n"+" Volume: "+getVolume());
     }
 
-    public boolean equals(Sfera oggetto)
-    {
-        boolean equals = true;
-        if(!(this.raggio==oggetto.getRaggio()&&super.equals(oggetto)))
-            equals = false;
-        return equals;
-    }
 
     public void disegna () {
 

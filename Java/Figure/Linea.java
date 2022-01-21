@@ -56,13 +56,6 @@ class Linea {
         return Math.sqrt(Math.pow(punto1.getX() - punto2.getX(), 2) + Math.pow(punto1.getY() - punto2.getY(), 2));
     }
 
-    public boolean equals(Linea obj) {
-        boolean equals = true;
-        if (!(this.punto1.equals(obj.getPunto1()) && this.punto2.equals(obj.getPunto2())))
-            equals = false;
-        return equals;
-    }
-
     public void presentati() {
         System.out.println("Sono una linea");
         System.out.println(" Punto 1 in posizione:" + "\n" + "  X=" + punto1.getX() + "\n" + "  Y=" + punto1.getY()

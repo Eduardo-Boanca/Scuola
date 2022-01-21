@@ -21,7 +21,7 @@ class Punto3D extends Punto
 
     public void presentati()
     {
-        System.out.println("Sono un punto3D in posizione \n X: " + this.getX()+ "\n" + " Y: " + this.getY() + "\n" + " Z: " + this.z);
+        System.out.println("Punto3D in posizione \n X: " + this.getX()+ "\n" + " Y: " + this.getY() + "\n" + " Z: " + this.z);
     }
 
     public double getDistance(Punto3D object)
@@ -35,11 +35,4 @@ class Punto3D extends Punto
         this.z= this.z + z;
     }
 
-    public boolean equals(Punto3D oggetto)
-    {
-        boolean equals = true;
-        if(!(this.z==oggetto.getZ()&&super.equals(oggetto)))
-            equals = false;
-        return equals;
-    }
 }
