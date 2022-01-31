@@ -5,27 +5,31 @@ public class Main {
         Lista lista = new Lista();
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         int scelta = 0;
-        boolean giusto;
+        boolean correct;
         do {
             System.out.println("1 - Inserisci Persona");
             System.out.println("2 - Visualizza Lista delle Persone");
             System.out.println("3 - Cerca Persona ");
             System.out.println("4 - Elimina Persona");
-            System.out.println("5 - Esci");
+            System.out.println("5 - Importa file CSV");
+            System.out.println("6 - Esporta CSV");
+            System.out.println("7 - Importa file JSON");
+            System.out.println("8 - Esporta JSON");
+            System.out.println("9 - Esci");
             System.out.println("Scelta: ");
             do {
                 do {
-                    giusto = false;
+                    correct = false;
                     try {
                         scelta = Integer.valueOf(tastiera.readLine()).intValue();
-                        giusto = true;
+                        correct = true;
                     } catch (Exception e) {
                         System.out.println("Input non corretto!");
                         System.out.println("Rinserisci il numero dell'operaione da svolgere: ");
                     }
-                } while (!giusto);
+                } while (!correct);
                 if (scelta < 1 || scelta > 5) {
-                    System.out.println("Il valore che inserisci deve essere compreso tra 1 e 5");
+                    System.out.println("Il valore che inserisci deve essere compreso tra 1 e 9");
                     System.out.println("Reinserisci il numero");
                 }
             } while (scelta < 1 || scelta > 5);
@@ -45,7 +49,19 @@ public class Main {
                 case 4:
                     lista.elimina();
                     break;
+                case 5:
+
+                    break;
+                case 6:
+
+                    break;
+                case 7:
+
+                    break;
+                case 8:
+
+                    break;
             }
-        } while (scelta != 5);
+        } while (scelta != 9);
     }
 }
