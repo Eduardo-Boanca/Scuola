@@ -50,20 +50,11 @@ public abstract class Opera {
     public void presentati() {
         System.out.printf("\nTitolo: %s", this.titolo);
         System.out.printf("\nAutore: %s", this.autore);
-        System.out.printf("\nAnno di pubblicazione %d", this.anno_pubblicazione);
+        System.out.printf("\nAnno di pubblicazione: %d", this.anno_pubblicazione);
+
     }
 
-    public int isBetterThen(Opera opera2) {
-        int result = 0;
-        result = opera.compareTo(opera2);
-        if (result == 0)
-            System.out.println("La recensioni ");
-        if (result < 0)
-            System.out.println("La prima recensione è peggiore");
-        if (result > 0)
-            System.out.println("La prima recensione è migliore");
-        return result;
-    }
+    public abstract int isBetterThen(int voto);
 
-    public abstract boolean equals();
+    //public abstract boolean equals();
 }

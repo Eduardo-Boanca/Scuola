@@ -1,24 +1,25 @@
-public class Film extends Opera implements Recensibile{
-    
+public class Film extends Opera implements Recensibile {
+
     private String casa_distributrice;
     private int stelle_recensione;
 
     // costruttore
-    public Opera(String MyTitolo, String MyAutore, int MyAnno_pubblicazione, String MyCasa_distributrice, int MyStelle_recensione) {
+    public Film(String MyTitolo, String MyAutore, int MyAnno_pubblicazione, String MyCasa_distributrice,
+            int MyStelle_recensione) {
         super(MyTitolo, MyAutore, MyAnno_pubblicazione);
         this.casa_distributrice = MyCasa_distributrice;
         this.stelle_recensione = MyStelle_recensione;
     }
 
     // costruttore di default
-    public Opera() {
+    public Film() {
     }
 
     // costruttore di copia
-    public Opera(Opera opera) {
-        this.titolo = opera.getTitolo();
-        this.autore = opera.getTitolo();
-        this.anno_pubblicazione = opera.getAnno_pubb();
+    public Film(Film obj) {
+        super(obj.getTitolo(), obj.getAutore(), obj.getAnno_pubb());
+        this.casa_distributrice = obj.getCasa_Distro();
+        this.stelle_recensione = obj.getRecensione();
     }
 
     public void setCasa_Distro(String casa_distributrice) {
@@ -33,21 +34,40 @@ public class Film extends Opera implements Recensibile{
         this.stelle_recensione = stelle_recensione;
     };
 
-    public String getStelle_Recensioni() {
+    public int getStelle_Recensioni() {
         return this.stelle_recensione;
     };
-    
-    public boolean equals(Libro obj) {
-        boolean result = true;
-        if (!(this.titolo == (obj.getTitolo())))
-            return false;
 
-        if (!(this.autore == (obj.getAutore())))
-            return false;
-       
-        if (!(this.anno_pubblicazione == (obj.getAnno_pubb())))
-            return false;
-        
+    public int getRecensione() {
+        return this.stelle_recensione;
+    }
+
+    public void setRecensione(int MyStelle_recensione) {
+        stelle_recensione = MyStelle_recensione;
+    }
+
+
+    public int isBetterThen(int voto) {
+        int result;
+        if (stelle_recensione == voto)
+            result = 0;
+        else if (stelle_recensione > voto)
+            result = 1;
+        else
+            result = -1;
         return result;
     }
+
+    public boolean equals(Film obj) {
+        boolean result = true;
+        if (!(this.casa_distributrice == (obj.getCasa_Distro())))
+            return false;
+
+        if (!(this.stelle_recensione == (obj.getStelle_Recensioni())))
+            return false;
+
+        return result;
+    }
+
+
 }
