@@ -1,6 +1,6 @@
 interface Recensibile {
     
     public void setRecensione();
-    public String getRecensione();
+    public int getRecensione();
     
 }

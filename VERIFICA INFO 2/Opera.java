@@ -65,17 +65,5 @@ public abstract class Opera {
         return result;
     }
 
-    public boolean equals(Opera opera2) {
-        boolean result = true;
-        if (!(this.titolo == (opera2.getTitolo())))
-            return false;
-
-        if (!(this.autore == (opera2.getAutore())))
-            return false;
-       
-        if (!(this.anno_pubblicazione == (opera2.getAnno_pubb())))
-            return false;
-        
-        return result;
-    }
+    public abstract boolean equals();
 }
