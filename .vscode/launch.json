@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Calcolatrice",
+            "request": "launch",
+            "mainClass": "Calcolatrice",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
             "name": "Launch MainAereo",
             "request": "launch",
             "mainClass": "MainAereo",

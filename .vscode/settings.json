@@ -2,6 +2,7 @@
     "java.project.sourcePaths": [
         "VERIFICA DI INFORMATICA",
         "Java/Punto",
+        "Java/Prova interaccia grafica",
         "Java/Figure",
         "Java/ES 8",
         "Java/ES 7",
@@ -11,6 +12,7 @@
         "Java/ES 3",
         "Java/ES 2",
         "Java/Aereo Militare",
-        "Java/ES 13"
-    ]
+        "Java/Calcolatrice Grafica"
+    ],
+    "C_Cpp.errorSquiggles": "Disabled"
 }

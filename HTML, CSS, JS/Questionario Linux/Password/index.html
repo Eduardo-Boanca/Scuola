@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <h1>
+    Quando scadrà la password?
+  </h1>
+  <h3>
+    In questo quiz dovrai indovinare la data di scadenza della password in base al codice su schermo
+  </h3>
+  <hr>
+
+  <div id="container">
+
+    <form>
+      <p id="random"></p>
+      <input id="a1" type="date"><br>
+    </form>
+
+    <p id="risposta"></p>
+    <button class="btn" id="generate" type="button" onclick="genRandom()">Genera</button>
+    <button class="btn" id="answer" type="button" onclick="verify()">Rispondi</button>
+    <button class="btn" id="reset" onclick="reset()" type="reset">Resetta</input>
+
+  </div>
+</body>
+
+</html>
