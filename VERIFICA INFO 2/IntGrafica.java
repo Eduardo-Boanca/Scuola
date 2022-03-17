@@ -3,69 +3,77 @@ import java.awt.*;
 
 class IntGrafica extends JFrame {
 
-    private JButton btnAggiungi = new JButton("Aggiungi");
-    private JButton btnStampa = new JButton("Stampa");
-
-    private JTextField txtA = new JTextField();
-    private JTextField txtB = new JTextField();
-    private JTextField txtC = new JTextField();
-    private JTextField txtD = new JTextField();
-    private JTextField txtE = new JTextField();
-    Libro libro1 = new Libro();
-
-    private JLabel lblA = new JLabel("Titolo:");
-    private JLabel lblB = new JLabel("Autore:");
-    private JLabel lblC = new JLabel("Anno di Pubblicazione:");
-    private JLabel lblD = new JLabel("Casa Editrice:");
-    private JLabel lblE = new JLabel("Voto 1-10:");
-
-    public IntGrafica() {
-        setTitle("Inserimento Informazioni");
-        setSize(400, 200);
-        setLocation(new Point(300, 200));
-        setLayout(null);
-        setResizable(true);
-
-        btnAggiungi.setBounds(300, 130, 80, 25);
-        btnStampa.setBounds(300, 130, 80, 25);
-
-        txtA.setBounds(100, 10, 130, 20);
-        txtB.setBounds(100, 35, 130, 20);
-        txtC.setBounds(100, 65, 130, 20);
-        txtD.setBounds(100, 65, 130, 20);
-        txtE.setBounds(100, 65, 130, 20);
-
-        lblA.setBounds(20, 10, 130, 20);
-        lblB.setBounds(20, 35, 130, 20);
-        lblC.setBounds(20, 65, 130, 20);
-        lblD.setBounds(20, 95, 130, 20);
-        lblE.setBounds(20, 125, 130, 20);
-
-        add(btnAggiungi);
-        add(btnStampa);
-
-        add(lblA);
-        add(lblB);
-        add(lblC);
-        add(lblD);
-        add(lblE);
-
-        add(txtA);
-        add(txtB);
-        add(txtC);
-        add(txtD);
-        add(txtE);
-
-        btnAggiungi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent e) {
-                btnAggiungiActionPerformed(e);
+    private JLabel l1, l2;
+    private JTextField tf1, tf2, tf3, tf4, tf5;
+    private JButton b1;
+    private int recensione;
+    Libro li1 = new Libro();
+    IntGrafica() {
+        
+        //Absolute layout
+        this.getContentPane().setLayout(null);
+        this.getContentPane().setBackground(new Color(255, 179, 134));
+        //X=close
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        tf1 = new JTextField(5);
+        add(tf1);
+        tf2 = new JTextField(5);
+        add(tf2);
+        tf3 = new JTextField(5);
+        add(tf3);
+        tf4 = new JTextField(5);
+        add(tf4);
+        tf5 = new JTextField(5);
+        add(tf5);
+        l1 = new JLabel("Nuovo oggetto: ");
+        add(l1);
+        l2 = new JLabel();
+        add(l2);
+        b1 = new JButton("Insert");
+        add(b1);
+        
+        b1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b1ActionPerformed(evt);
             }
         });
+
+        l1.setBounds(20,280,100,20);
+        l2.setBounds(20,300,100,100);
+        tf1.setBounds(30,10,50,20);
+        tf2.setBounds(30,50,50,20);
+        tf3.setBounds(30,100,50,20);
+        tf4.setBounds(30,150,50,20);
+        tf5.setBounds(30,200,50,20);
+        b1.setBounds(300,280,70,30);
+        setSize(400,400);
+        setVisible(true);
     }
 
-    private void btnAggiungiActionPerformed(java.awt.event.ActionEvent e)
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt)
     {
+        String text = tf3.getText();
+        int val1 = Integer.parseInt(text.trim());
+        String text2 = tf5.getText();
+        int val2 = Integer.parseInt(text2.trim());
 
+        li1.setTitolo(tf1.getText());
+        li1.setAutore(tf2.getText());
+        li1.setAnno_pubb(val1);
+        li1.setCasa_Editor(tf4.getText());
+        li1.setVoto_Decimi(val2);
+        l2.setText(li1.toString());
     } 
 
-}
+    public int getRecensione()
+    {
+        return this.li1.getVoto_Decimi();
+    }
+
+    public void setRecensione(int recensione)
+    {
+        //this.li1.setVoto_in_decimi(Integer.parseInt(tf3.getText()))=recensione;
+    }
+
+ }
+

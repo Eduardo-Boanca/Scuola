@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainGrafico",
+            "request": "launch",
+            "mainClass": "MainGrafico",
+            "projectName": "Scuola_1df960d2"
+        },
+        {
+            "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "Scuola_1df960d2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Grafico",
+            "request": "launch",
+            "mainClass": "Grafico",
+            "projectName": "Scuola_1df960d2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Scuola_1df960d2"
+        },
+        {
+            "type": "java",
             "name": "Launch Calcolatrice",
             "request": "launch",
             "mainClass": "Calcolatrice",

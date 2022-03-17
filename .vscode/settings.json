@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "VERIFICA INFO 2",
         "VERIFICA DI INFORMATICA",
         "Java/Punto",
         "Java/Prova interaccia grafica",
@@ -13,7 +14,10 @@
         "Java/ES 2",
         "Java/Calcolatrice Grafica",
         "Java/Aereo Militare",
-        "VERIFICA INFO 2"
+        "Java/ES 17"
     ],
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "cSpell.words": [
+        "interfaccia"
+    ]
 }
