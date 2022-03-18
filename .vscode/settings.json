@@ -16,7 +16,14 @@
         "Java/ES 2",
         "Java/Calcolatrice Grafica",
         "Java/Aereo Militare",
+<<<<<<< HEAD
         ""
+=======
+        "Java/ES 17"
+>>>>>>> aaf29748944e63d1582b9d94b66be74ed8fe3e03
     ],
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "cSpell.words": [
+        "interfaccia"
+    ]
 }

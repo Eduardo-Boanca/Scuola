@@ -6,10 +6,38 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch Multithread",
             "request": "launch",
             "mainClass": "Multithread",
             "projectName": "Scuola_e301baf0"
+=======
+            "name": "Launch MainGrafico",
+            "request": "launch",
+            "mainClass": "MainGrafico",
+            "projectName": "Scuola_1df960d2"
+        },
+        {
+            "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "Scuola_1df960d2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Grafico",
+            "request": "launch",
+            "mainClass": "Grafico",
+            "projectName": "Scuola_1df960d2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Scuola_1df960d2"
+>>>>>>> aaf29748944e63d1582b9d94b66be74ed8fe3e03
         },
         {
             "type": "java",
