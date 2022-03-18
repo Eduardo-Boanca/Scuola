@@ -23,16 +23,16 @@ function cambiaTesto() {
         title.style.fontStyle = 'normal';
     }
 
+}
+
+
+
+function reverseString() {
+    var str = document.getElementById('reversTheName').value;
+    var newString = "";
+
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
     }
-
-
-
-    function reverseString(){
-        var str = document.getElementById('reversTheName').value;
-        var newString="";
-     
-        for(var i=str.length-1; i>=0; i--){
-            newString += str[i];
-        }
-        document.getElementById('showData').value = newString;
-       }
+    document.getElementById('showData').value = newString;
+}

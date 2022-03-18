@@ -1,6 +1,13 @@
 import java.io.*;
-
+/**
+ * @author Eduardo Boanca
+ * @version 1.00
+ */
 public class Main {
+    
+    /** 
+     * @param args[]
+     */
     public static void main(String args[]) {
         Lista lista = new Lista();
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));

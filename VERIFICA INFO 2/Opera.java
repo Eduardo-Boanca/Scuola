@@ -50,8 +50,7 @@ public abstract class Opera {
     public void presentati() {
         System.out.printf("\nTitolo: %s", this.titolo);
         System.out.printf("\nAutore: %s", this.autore);
-        System.out.printf("\nAnno di pubblicazione: %d", this.anno_pubblicazione);
-
+        System.out.printf("\nAnno di pubblicazione: %d\n", this.anno_pubblicazione);
     }
 
     public abstract int isBetterThen(int voto);

@@ -45,17 +45,6 @@ public class Libro extends Opera implements Recensibile {
         voto_in_decimi = MyVoto_in_decimi;
     }
 
-    // public int isBetterThen(Libro libro2) {
-    // int result = 0;
-    // result = opera.compareTo(libro2);
-    // if (result == 0)
-    // System.out.println("La recensioni hanno lo stesso voto");
-    // if (result < 0)
-    // System.out.println("La prima recensione è peggiore");
-    // if (result > 0)
-    // System.out.println("La prima recensione è migliore");
-    // return result;
-    // }
 
     public int isBetterThen(int voto) {
         int result;

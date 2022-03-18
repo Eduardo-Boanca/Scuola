@@ -87,6 +87,10 @@ public class Lista {
         }
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean contiene() {
         boolean isThere = false;
         if (firstPosition == null)

@@ -23,50 +23,98 @@ public class Persona {
         dataNascita = new DataN(persona.getDayBirth(), persona.getMonthBirth(), persona.getYearBirth());
     }
 
+    
+    /** 
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getName() {
         return this.name;
     }
 
+    
+    /** 
+     * @param surname
+     */
     public void setSurname(String surname) {
         this.surname = surname;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getSurname() {
         return this.surname;
     }
 
+    
+    /** 
+     * @param day
+     */
     public void setDayBirth(String day) {
         this.dataNascita.setDay(day);
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getDayBirth() {
         return dataNascita.getDay();
     }
 
+    
+    /** 
+     * @param month
+     */
     public void setMonthBirth(String month) {
         this.dataNascita.setMonth(month);
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getMonthBirth() {
         return dataNascita.getMonth();
     }
 
+    
+    /** 
+     * @param year
+     */
     public void setYearBirth(String year) {
         this.dataNascita.setYear(year);
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getYearBirth() {
         return dataNascita.getYear();
     }
 
+    
+    /** 
+     * @return DataN
+     */
     public DataN getDataNascita() {
         return this.dataNascita;
     }
 
+    
+    /** 
+     * @param dataNascita
+     */
     public void setDataNascita(DataN dataNascita) {
         this.dataNascita = dataNascita;
       }
@@ -78,6 +126,10 @@ public class Persona {
                 this.getYearBirth());
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isMaggiorenne() {
         // int compleyear = Integer.valueOf(getDataNascita());
         int mese = Integer.valueOf(getDataNascita().getMonth());
@@ -96,6 +148,11 @@ public class Persona {
         else
             return false;
     }
+    
+    /** 
+     * @param person
+     * @return int
+     */
     public int compareTo(Persona person) {
         if (this.surname.compareTo(person.getSurname()) != 0)
             if (this.surname.compareTo(person.getSurname()) < 0)
@@ -110,10 +167,18 @@ public class Persona {
             return 1;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean checkDate() {
         return dataNascita.checkDate();
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isEtaMaggiorenne() {
         return isMaggiorenne();
     }

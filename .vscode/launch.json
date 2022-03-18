@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Multithread",
+            "request": "launch",
+            "mainClass": "Multithread",
+            "projectName": "Scuola_e301baf0"
+        },
+        {
+            "type": "java",
             "name": "Launch Calcolatrice",
             "request": "launch",
             "mainClass": "Calcolatrice",

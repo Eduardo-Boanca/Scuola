@@ -2,6 +2,10 @@ package Menu;
 import java.util.Scanner;
 
 class Menu {
+  
+  /** 
+   * @param args
+   */
   // Scrivere un programma con un menu di scelta
   public static void main(String[] args)
   {

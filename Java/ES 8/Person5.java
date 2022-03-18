@@ -2,8 +2,12 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
+/**
+ * calsse person5
+ */
 public class Person5 {// inizio classe
 
+  
   // attributi
   private String firstName, lastName, gender;
   private int age;
@@ -11,10 +15,17 @@ public class Person5 {// inizio classe
   boolean sleeping;
   private DataN dataNascita;
 
+  /**
+   * Costruttore default
+   */
   public Person5() {
 
   }
 
+  /**
+   * 
+   * @param person persona
+   */
   public Person5(Person5 person) {
     this.firstName = person.getFirstName();
     this.lastName = person.getLastName();
@@ -25,6 +36,16 @@ public class Person5 {// inizio classe
     this.dataNascita = person.getDataNascita();
   }
 
+  /**
+   * 
+   * @param myFirstName nome
+   * @param myLastName cognome
+   * @param myGender gender
+   * @param myAge eta
+   * @param myHeight altezza
+   * @param MySleeping dormire
+   * @param MyDataNascita data di nascita
+   */
   // costruttore
   public Person5(String myFirstName, String myLastName, String myGender, int myAge, String myHeight, boolean MySleeping,
       DataN MyDataNascita) {
@@ -37,66 +58,127 @@ public class Person5 {// inizio classe
     this.dataNascita = MyDataNascita;
   }
 
+  
+  /** 
+   * @return String
+   */
   public String getFirstName() {
     return this.firstName;
   }
 
+  
+  /** 
+   * @return String
+   */
   public String getLastName() {
     return this.lastName;
   }
 
+  
+  /** 
+   * @return String
+   */
   public String getGender() {
     return this.gender;
   }
 
+  
+  /** 
+   * @return int
+   */
   public int getAge() {
     return this.age;
   }
 
+  
+  /** 
+   * @return String
+   */
   public String getHeight() {
     return this.height;
   }
 
+  
+  /** 
+   * @return boolean
+   */
   public boolean getSleeping() {
     return this.sleeping;
   }
 
+  
+  /** 
+   * @return DataN
+   */
   public DataN getDataNascita() {
     return this.dataNascita;
   }
 
+  
+  /** 
+   * @param firstName nome
+   */
   public void setFirstName(String firstName)// Metodo che valorizza l'attributo targa in base al parametro passato in
                                             // input
   {
     this.firstName = firstName;
   }
 
+  
+  /** 
+   * @param lastName cognome
+   */
   public void setLastName(String lastName) // Metodo che valorizza l'attributo velocita in base al parametro passato in
                                            // input
   {
     this.lastName = lastName;
   }
 
+  
+  /** 
+   * @param gender gender
+   */
   public void setGender(String gender) {
     this.gender = gender;
   }
 
+  
+  /** 
+   * @param age età
+   */
   public void setAge(int age) {
     this.age = age;
   }
 
+  
+  /** 
+   * @param string stringa
+   */
   public void setHeight(String string) {
     this.height = string;
   }
 
+  
+  /** 
+   * @param sleeping variabile per vedere se dorme
+   * @return boolean
+   */
   public boolean setSleeping(boolean sleeping) {
     return this.sleeping = sleeping;
   }
 
+  
+  /** 
+   * @param dataNascita data di nascita
+   */
   public void setDataNascita(DataN dataNascita) {
     this.dataNascita = dataNascita;
   }
 
+  
+  /** 
+   * @return String
+   */
   // metodi
   public String presentati() {
     String str = "";
@@ -109,6 +191,10 @@ public class Person5 {// inizio classe
     return str;
   }
 
+  
+  /** 
+   * @return boolean
+   */
   boolean isDormendo() {
     if (this.getSleeping() == true)
       System.out.println("Ora sto dormendo");
@@ -117,6 +203,11 @@ public class Person5 {// inizio classe
     return sleeping;
   }
 
+  
+  /** 
+   * @param person persona
+   * @return boolean
+   */
   public boolean isEqual(Person5 person) {
     if (this.firstName.equals(person.getFirstName()) && this.lastName.equals(person.getLastName())
         && this.gender.equals(person.getGender()) && this.age == person.getAge() && this.height == person.getHeight())
@@ -125,6 +216,11 @@ public class Person5 {// inizio classe
       return false;
   }
 
+  
+  /** 
+   * @param person persona
+   * @return int
+   */
   public int compareTo(Person5 person) {
     if (this.lastName.compareTo(person.getLastName()) != 0)
       if (this.lastName.compareTo(person.getLastName()) < 0)
@@ -139,6 +235,10 @@ public class Person5 {// inizio classe
       return 1;
   }
 
+  
+  /** 
+   * @return boolean
+   */
   public boolean isMaggiorenne() {
     // int compleanno = Integer.valueOf(getDataNascita());
     int mese = Integer.valueOf(getDataNascita().getMonth());
@@ -159,6 +259,11 @@ public class Person5 {// inizio classe
       
   }
 
+  
+  /** 
+   * @param person2 persona
+   * @return int
+   */
   public int olderThan(Person5 person2) {
     int result = 0;
     String birth = this.dataNascita.toString();

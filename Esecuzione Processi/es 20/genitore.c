@@ -5,8 +5,8 @@
 #include <stdlib.h>
 
 /****************************************************************
- *                      genitore.c
- ****************************************************************/
+                        genitore.c
+***************************************************************/
 
 int main()
 {
@@ -14,20 +14,17 @@ int main()
     pid_t pid2;
     pid_t padre;
 
-    int x;
-    int y;
-    int z;
-    int w;
-    int h;
+    int calcoloPadre;
+    int calcoloFiglio1;
+    int calcoloFiglio2;
+    int calcoloFinale;
 
     padre = getpid();
 
     if (padre == getpid())
-    {
-        pid2 = fork();
-    }
+        pid = fork();
 
-    pid = fork();
+   
     if (pid == 0)
     {
         if (execl("figlio1", "figlio1", NULL) < 0)
@@ -36,27 +33,24 @@ int main()
             exit(EXIT_FAILURE);
         }
     }
-    else
+    
+    else if ((pid2 = fork()) == 0)
     {
-        if (pid2 == 0)
+        if (execl("figlio2", "figlio2", NULL) < 0)
         {
-            if (execl("figlio2", "figlio2", NULL) < 0)
-            {
-                perror("errore di exec");
-                exit(EXIT_FAILURE);
-            }
-        }
-        else
-        {
-            // Processo genitore
-            x = 2 * 6;
-            printf("Padre: calcolo x = 2 * 6\n");
-            waitpid(pid, &y, 0);
-            waitpid(pid2, &z, 0);
-            w = x + (WEXITSTATUS(y) * WEXITSTATUS(z));
-            printf("Calcolo x: = 2 * 6 = %d, Calcolo y: = 1 + 4 = %d, Calcolo z: = 5 - 2 = %d, Calcolo w: = x + (y * z) = %d", x, WEXITSTATUS(y), WEXITSTATUS(z), w);
+            perror("errore di exec");
+            exit(EXIT_FAILURE);
         }
     }
+
+        // Processo genitore
+        calcoloPadre = 2 * 6;
+        printf("Padre: calcolo padre = 2 * 6\n");
+        waitpid(pid, &calcoloFiglio1, 0);
+        waitpid(pid2, &calcoloFiglio2, 0);
+        calcoloFinale = calcoloPadre + (WEXITSTATUS(calcoloFiglio1) * WEXITSTATUS(calcoloFiglio2));
+        printf(" Calcolo padre: = 2 * 6 = %d\n Calcolo figlio 1: = 1 + 4 = %d\n Calcolo figlio 2: = 5 - 2 = %d\n Calcolo risultato finale: = padre + (calcoloFiglio1 * calcoloFiglio2) = %d\n", calcoloPadre, WEXITSTATUS(calcoloFiglio1), WEXITSTATUS(calcoloFiglio2), calcoloFinale);
+
 
     return 0;
 }
