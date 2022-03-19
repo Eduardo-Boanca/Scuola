@@ -60,6 +60,10 @@ public class Film extends Opera implements Recensibile {
 
     public boolean equals(Film obj) {
         boolean result = true;
+
+        if(!(super.equals(obj)))
+        return false;
+
         if (!(this.casa_distributrice == (obj.getCasa_Distro())))
             return false;
 

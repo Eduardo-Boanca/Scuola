@@ -16,7 +16,7 @@ public class Libro extends Opera implements Recensibile {
 
     // costruttore di copia
     public Libro(Libro obj) {
-        super(obj.getTitolo(), obj.getAutore(), obj.getAnno_pubb());
+
         this.casa_editrice = obj.getCasa_Editor();
         this.voto_in_decimi = obj.getRecensione();
     }
@@ -60,6 +60,10 @@ public class Libro extends Opera implements Recensibile {
 
     public boolean equals(Libro obj) {
         boolean result = true;
+
+        if(!(super.equals(obj)))
+            return false;
+
         if (!(this.casa_editrice == (obj.getCasa_Editor())))
             return false;
 

@@ -53,7 +53,22 @@ public abstract class Opera {
         System.out.printf("\nAnno di pubblicazione: %d\n", this.anno_pubblicazione);
     }
 
+    public boolean equals(Opera obj) {
+        boolean result = true;
+
+        if (!(this.titolo == (obj.getTitolo())))
+            return false;
+
+        if (!(this.autore == (obj.getAutore())))
+            return false;
+
+        if (!(this.anno_pubblicazione == (obj.getAnno_pubb())))
+            return false;
+
+        return result;
+    }
+
     public abstract int isBetterThen(int voto);
 
-    //public abstract boolean equals();
+    // public abstract boolean equals();
 }
