@@ -1,3 +1,4 @@
+package prova;
 public class Multithread {
     public static void main(String[] args) {
         // MultithreadThing myThread = new MultithreadThing();

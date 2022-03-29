@@ -1,3 +1,4 @@
+package prova;
 public class MultithreadThing extends Thread {
     
     @Override
