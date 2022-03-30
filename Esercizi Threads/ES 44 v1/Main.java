@@ -1,5 +1,7 @@
+/**** MAIN ****/
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //fa partire 10 thread e fa il calcolo con numeri diversi
         for (int i = 1; i <= 10; i++) {

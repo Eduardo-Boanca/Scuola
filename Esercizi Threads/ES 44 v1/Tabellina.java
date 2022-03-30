@@ -1,3 +1,5 @@
+/**** TABELLINA ****/
+
 public class Tabellina implements Runnable {
 
     private int numero;
