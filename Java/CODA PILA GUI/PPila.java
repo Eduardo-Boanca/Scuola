@@ -19,7 +19,7 @@ public class PPila extends JFrame implements ActionListener {
     private JButton contenuto = new JButton("Contenuto");
 
     public PPila() {
-        super("PANETTERIA LIFO");
+        super("LIFO");
         oggetto.setHorizontalAlignment(JLabel.CENTER);
         riepilogo.setHorizontalAlignment(JLabel.CENTER);
 
@@ -77,10 +77,10 @@ public class PPila extends JFrame implements ActionListener {
             case "Ritira":
                 if (size > 0) {
                     ris.setText("Ultimo ordine " + lista.get(size - 1) + " ritirato");
-                    lista.remove(size - 1);
+                    lista.remove(size - 1); //rimuovo l'ultimo elemento della lista essendo LIFO
                 } else
                     ris.setText("ERRORE! Inserire un ordine");
-                tf.setText("");
+                tf.setText(""); //cancello il contenuto del TextField
                 break;
 
             case "Contenuto":

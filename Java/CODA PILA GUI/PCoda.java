@@ -19,7 +19,7 @@ public class PCoda extends JFrame implements ActionListener {
     private JButton contenuto = new JButton("Contenuto");
 
     public PCoda() {
-        super("PANETTERIA FIFO");
+        super("FIFO");
         oggetto.setHorizontalAlignment(JLabel.CENTER);
         riepilogo.setHorizontalAlignment(JLabel.CENTER);
 

@@ -18,7 +18,7 @@ public class Editor extends JFrame implements ActionListener {
     JMenu menu;
     JMenuItem item;
     // menu Modifica
-    menu = new JMenu("PANETTERIA");
+    menu = new JMenu("FIFO/LIFO");
 
     bar.add(menu);
     // voci
