@@ -8,9 +8,9 @@ public class Main {
             Tabellina tabellina = new Tabellina(i);
             Thread threads = new Thread(tabellina);
             threads.start();
-            //join() ogni esecuzione del thread aspetterà la fine
-            //dell'esecuzione del thread precedente 
-            //prima di eseguire il codice, questo rende l'esecuzione ordinata
+            //join(), il thread aspetterà finché lo stesso thread
+            //ha finito la sua esecuzione e quindi il thread successivo
+            //può iniziare la sua esecuzione, rendendo l’esecuzione ordinata
             try {
                 threads.join();
             } catch(InterruptedException e) {
