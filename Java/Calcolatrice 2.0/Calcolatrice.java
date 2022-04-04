@@ -107,6 +107,8 @@ public class Calcolatrice extends JFrame implements ActionListener {
         }
     }
 
+    //metodo che si basa su attributo "op" e in base all'operazione scelta
+    //viene detto quale operazione eseguire una volta premuto il bottone "="
     int eval() {
         switch (op) {
             case '+':
