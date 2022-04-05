@@ -59,13 +59,13 @@ public class Calcolatrice extends JFrame implements ActionListener {
 
 
     public void actionPerformed(ActionEvent e) {
-        JButton pb = (JButton) e.getSource(); //per capire quale tasto è stato premuto
+        JButton buttonPressed = (JButton) e.getSource(); //per capire quale tasto è stato premuto
         
         //se il tasto b15 ovvero cancella è premuto il contenuto del TextField è Azzerato 
-        if (pb == b15) {
+        if (buttonPressed == b15) {
             r = n1 = n2 = 0;
             res.setText("");
-        } else if (pb == b14) { //se il tasto b15 ovvero "=" è premuto
+        } else if (buttonPressed == b14) { //se il tasto b15 ovvero "=" è premuto
             n2 = Integer.parseInt(res.getText()); //da stringa a intero tramite getText e parseInt
             eval(); //metodo che dice quale operazione è stata scelta
             res.setText("" + r); //il risultato viene mostrato
@@ -73,19 +73,19 @@ public class Calcolatrice extends JFrame implements ActionListener {
 
         else {
             boolean opf = false; //indica se il tasto è cliccato oppure no
-            if (pb == b10) {
+            if (buttonPressed == b10) {
                 op = '+';
                 opf = true;
             }
-            if (pb == b11) {
+            if (buttonPressed == b11) {
                 op = '-';
                 opf = true;
             }
-            if (pb == b12) {
+            if (buttonPressed == b12) {
                 op = '*';
                 opf = true;
             }
-            if (pb == b13) {
+            if (buttonPressed == b13) {
                 op = '/';
                 opf = true;
             }
@@ -94,8 +94,8 @@ public class Calcolatrice extends JFrame implements ActionListener {
             //e ciò implica che il bottone che è stato cliccato e salvato dentro a n1 o n2
             if (opf == false) {
                 for (i = 0; i < 10; i++) {
-                    if (pb == b[i]) {
-                        String t = res.getText(); //pendo il testo del bottone cliccato
+                    if (buttonPressed == b[i]) {
+                        String t = res.getText(); //prendo il testo del bottone cliccato
                         t += i;
                         res.setText(t); //e lo ritorno nel TextField
                     }
