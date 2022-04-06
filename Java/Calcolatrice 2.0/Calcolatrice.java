@@ -15,12 +15,12 @@ public class Calcolatrice extends JFrame implements ActionListener {
         super("Calcolatrice");
 
         setLayout(new BorderLayout());
-        JPanel p = new JPanel();
+        JPanel p = new JPanel(); //JPanel() è il container
         p.setLayout(new GridLayout(4, 4));
         
         //Bottoni con i numeri
         for (int i = 0; i <= 9; i++) {
-            b[i] = new JButton(i + "");
+            b[i] = new JButton(i + ""); //per inserire il valore del tasto 0-9
             p.add(b[i]);
             b[i].addActionListener(this); //(this) per dire su che bottone si sta eseguendo l'azione
         }
