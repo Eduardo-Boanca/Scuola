@@ -10,7 +10,7 @@ public class DescendingHacker extends Thread {
     }
 
     public int getValueToStartFrom() {
-        return valueToStartFrom;
+        return this.valueToStartFrom;
     }
 
     public void setValueToStartFrom(int myValueToStartFro) {
@@ -18,7 +18,7 @@ public class DescendingHacker extends Thread {
     }
 
     public int getPass_code() {
-        return pass_code;
+        return this.pass_code;
     }
 
     public void setPass_code(int ThePass_code) {
@@ -27,8 +27,10 @@ public class DescendingHacker extends Thread {
 
     @Override
     public void run() {
-
+        boolean passGuessed = false;
         for (int i = this.valueToStartFrom; i >= this.pass_code && Main.running; i--) {
+            if (i == this.pass_code)
+                passGuessed = true;
             try {
                 Thread.sleep(5);
             } catch (Exception e) {
@@ -36,17 +38,15 @@ public class DescendingHacker extends Thread {
             }
 
         }
-        if (valueToStartFrom == this.pass_code) {
-            System.out.println(
-                    "The Password has been guessed by " + currentThread().getName() + ", it was: " + this.pass_code);
-            Main.running = false;
-        }
+        if (passGuessed == true)
+            System.out.println("The Password has been guessed by " + currentThread().getName() + ", it was: " + this.pass_code);
+        Main.running = false;
     }
 
     @Override
     public void start() {
-        super.start();
         System.out.println("******Descending Hacker Started******");
+        super.start();
     }
 
 }

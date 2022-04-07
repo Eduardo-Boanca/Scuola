@@ -22,7 +22,7 @@ public class PoliceThread extends Thread implements Runnable {
         for (int i = this.seconds; i >= 0 && Main.running; i--) {
             if (i == 0)
                 Police_Won = true;
-            System.out.println("Remaining time before the police arrives: " + i);
+            System.out.println("Remaining time before the police arrives: " + i + " seconds");
             try {
                 Thread.sleep(1000);
             } catch (Exception e) {
