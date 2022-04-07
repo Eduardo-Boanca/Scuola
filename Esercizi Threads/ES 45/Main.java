@@ -15,27 +15,27 @@ public class Main {
         Thread AscendingHacker = new AscendingHacker(pass_code, MINNUMBER);
         Thread DescendingHacker = new DescendingHacker(pass_code, MAXNUMBER);
         Thread Police = new PoliceThread(randTime);
-        Thread DichotomicHacker = new DichotomicHacker(pass_code, MAXNUMBER, MINNUMBER);
+        Thread DichotomicHacker = new DichotomicHacker(MAXNUMBER, MINNUMBER, pass_code);
 
         Runtime.getRuntime().addShutdownHook(new MyShutdownHook());
 
-        // Police.setPriority(Thread.NORM_PRIORITY);
-        // DescendingHacker.setPriority(Thread.MIN_PRIORITY);
-        // AscendingHacker.setPriority(Thread.MAX_PRIORITY);
-        // DichotomicHacker.setPriority(Thread.MAX_PRIORITY);
+        Police.setPriority(Thread.NORM_PRIORITY);
+        DescendingHacker.setPriority(Thread.MIN_PRIORITY);
+        AscendingHacker.setPriority(Thread.MAX_PRIORITY);
+        DichotomicHacker.setPriority(Thread.MAX_PRIORITY);
         
-        //AscendingHacker.start();
-        //DescendingHacker.start();
-        DichotomicHacker.start();
+        AscendingHacker.start();
+        DescendingHacker.start();
+        //DichotomicHacker.start();
         Police.start();
 
-        try {
-            //AscendingHacker.join();
-            //DescendingHacker.join();
-            DichotomicHacker.join();
-            Police.join();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     AscendingHacker.join();
+        //     DescendingHacker.join();
+        //     DichotomicHacker.join();
+        //     Police.join();
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
     }
 }

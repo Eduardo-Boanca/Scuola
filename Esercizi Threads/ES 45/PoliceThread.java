@@ -18,7 +18,7 @@ public class PoliceThread extends Thread {
     @Override
     public void run() {
         boolean Police_Won = false;
-        System.out.println("******The police is coming for the Hackers******");
+        System.out.println("===The police is coming for the Hackers===");
         for (int i = this.seconds; i >= 0 && Main.running; i--) {
             if (i == 0)
                 Police_Won = true;
