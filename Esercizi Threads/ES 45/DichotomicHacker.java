@@ -43,7 +43,7 @@ public class DichotomicHacker extends Thread {
         min_number = Main.MINNUMBER;
 
         do {
-            middle_number = (max_number - min_number) / 2;
+            middle_number = (max_number + min_number) / 2;
             if (middle_number == this.pass_code)
                 passGuessed = true;
 
@@ -57,7 +57,10 @@ public class DichotomicHacker extends Thread {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } while (middle_number <= max_number && passGuessed == false && Main.running);
+        } while (middle_number <= max_number && Main.running);
+
+        if(passGuessed == true)
+            System.out.println("DEBUGGER");
 
         if (passGuessed == true)
             System.out.println("The Password has been guessed by " + currentThread().getName() + ", it was: " + getPass_code());
@@ -66,7 +69,7 @@ public class DichotomicHacker extends Thread {
 
     @Override
     public void start() {
-        System.out.println("******Dichotomic Hacker Started******");
+        System.out.println("DICHOTOMIC TYPE HACKER STARTED");
         super.start();
     }
 

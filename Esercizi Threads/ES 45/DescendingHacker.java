@@ -45,7 +45,7 @@ public class DescendingHacker extends Thread {
 
     @Override
     public void start() {
-        System.out.println("******Descending Hacker Started******");
+        System.out.println("DESCENDING TYPE HACKER STARTED");
         super.start();
     }
 

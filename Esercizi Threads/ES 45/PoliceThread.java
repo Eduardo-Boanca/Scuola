@@ -1,4 +1,4 @@
-public class PoliceThread extends Thread implements Runnable {
+public class PoliceThread extends Thread {
 
     private int seconds;
 

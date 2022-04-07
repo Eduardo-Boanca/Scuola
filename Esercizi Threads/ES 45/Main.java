@@ -9,28 +9,29 @@ public class Main {
     public static void main(String[] args) {
 
         Random randNumber = new Random();
-        Random randTime = new Random();
+        int randTime = (int) (Math.random() * TIME);
         int pass_code = randNumber.nextInt(MAXNUMBER);
 
         Thread AscendingHacker = new AscendingHacker(pass_code, MINNUMBER);
         Thread DescendingHacker = new DescendingHacker(pass_code, MAXNUMBER);
-        Thread Police = new PoliceThread(randTime.nextInt(TIME));
+        Thread Police = new PoliceThread(randTime);
         Thread DichotomicHacker = new DichotomicHacker(pass_code, MAXNUMBER, MINNUMBER);
 
         Runtime.getRuntime().addShutdownHook(new MyShutdownHook());
 
-        Police.setPriority(Thread.NORM_PRIORITY);
-        DescendingHacker.setPriority(Thread.MAX_PRIORITY);
+        // Police.setPriority(Thread.NORM_PRIORITY);
+        // DescendingHacker.setPriority(Thread.MIN_PRIORITY);
         // AscendingHacker.setPriority(Thread.MAX_PRIORITY);
-        DichotomicHacker.setPriority(Thread.MAX_PRIORITY);
-        AscendingHacker.start();
-        DescendingHacker.start();
+        // DichotomicHacker.setPriority(Thread.MAX_PRIORITY);
+        
+        //AscendingHacker.start();
+        //DescendingHacker.start();
         DichotomicHacker.start();
         Police.start();
 
         try {
-            AscendingHacker.join();
-            DescendingHacker.join();
+            //AscendingHacker.join();
+            //DescendingHacker.join();
             DichotomicHacker.join();
             Police.join();
         } catch (Exception e) {
