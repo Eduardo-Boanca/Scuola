@@ -26,12 +26,12 @@ public class Main {
         
         AscendingHacker.start();
         DescendingHacker.start();
-        //DichotomicHacker.start();
+        DichotomicHacker.start();
         Police.start();
 
         // try {
         //     AscendingHacker.join();
-        //     DescendingHacker.join();
+        //     DescendingHacker.join();<
         //     DichotomicHacker.join();
         //     Police.join();
         // } catch (Exception e) {
