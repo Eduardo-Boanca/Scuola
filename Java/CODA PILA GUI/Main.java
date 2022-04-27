@@ -1,6 +1,6 @@
-public class EditorTesto {
+public class Main {
     public static void main(String args[]) {
-        Editor f = new Editor();
+        MenuScelta f = new MenuScelta();
         f.pack();
         f.setSize(300, 300);
         f.setLocation(500, 250);

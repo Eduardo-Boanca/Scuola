@@ -12,7 +12,7 @@ public class PPila extends JFrame implements ActionListener {
     private JTextField ris = new JTextField(10);
 
     private JLabel oggetto = new JLabel("Inserire quello che si vuole acquistare");
-    private JLabel riepilogo = new JLabel("Riepilogo ");
+    private JLabel carrello = new JLabel("Carrello ");
 
     private JButton ordina = new JButton("Ordina");
     private JButton ritira = new JButton("Ritira");
@@ -21,20 +21,20 @@ public class PPila extends JFrame implements ActionListener {
     public PPila() {
         super("LIFO");
         oggetto.setHorizontalAlignment(JLabel.CENTER);
-        riepilogo.setHorizontalAlignment(JLabel.CENTER);
+        carrello.setHorizontalAlignment(JLabel.CENTER);
 
-        ordina.setForeground(Color.WHITE);
-        ritira.setForeground(Color.WHITE);
-        contenuto.setForeground(Color.WHITE);
+        ordina.setForeground(Color.BLACK);
+        ritira.setForeground(Color.BLACK);
+        contenuto.setForeground(Color.BLACK);
 
-        ordina.setBackground(Color.MAGENTA);
-        ritira.setBackground(Color.GRAY);
-        contenuto.setBackground(Color.BLUE);
+        ordina.setBackground(Color.BLACK);
+        ritira.setBackground(Color.BLACK);
+        contenuto.setBackground(Color.BLACK);
 
         p1.setLayout(new GridLayout(3, 2, 2, 2));
         p1.add(oggetto);
         p1.add(tf);
-        p1.add(riepilogo);
+        p1.add(carrello);
         p1.add(ris);
 
         p2.setLayout(new GridLayout(3, 2, 2, 2));
@@ -60,39 +60,36 @@ public class PPila extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String pulsante = e.getActionCommand();
-        String str = tf.getText(); //prende il testo all'intendo del TextField
+        String str = tf.getText(); // prende il testo all'intendo del TextField
         int size = lista.size();
         switch (pulsante) {
             case "Ordina":
-                if (str.isEmpty() == false) // Empty controlla che il contenuto del textfield sia vuoto o no
-                {
+                if (str.isEmpty() == false) {// Empty controlla che il contenuto del textfield sia vuoto o no
                     lista.add(str);
                     ris.setText("Inserimento avvenuto");
-                } else {
-                    ris.setText("ERRORE! Inserire un ordine");
-                }
+                } else
+                    ris.setText("Il carrello è vuoto. Inserisci un ordine");
+
                 tf.setText("");
                 break;
 
             case "Ritira":
                 if (size > 0) {
                     ris.setText("Ultimo ordine " + lista.get(size - 1) + " ritirato");
-                    lista.remove(size - 1); //rimuovo l'ultimo elemento della lista essendo LIFO
+                    lista.remove(size - 1); // rimuovo l'ultimo elemento della lista essendo LIFO
                 } else
-                    ris.setText("ERRORE! Inserire un ordine");
-                tf.setText(""); //cancello il contenuto del TextField
+                    ris.setText("Il carrello è vuoto. Inserisci un ordine");
+
+                tf.setText(""); // cancello il contenuto del TextField
                 break;
 
             case "Contenuto":
                 if (size > 0) {
                     ris.setText(lista.toString());
                 } else
-                    ris.setText("ERRORE! Inserire un ordine");
+                    ris.setText("Il carrello è vuoto. Inserisci un ordine");
                 break;
         }
     }
 
-    public static void main(String[] args) {
-        new PPila();
-    }
 }
