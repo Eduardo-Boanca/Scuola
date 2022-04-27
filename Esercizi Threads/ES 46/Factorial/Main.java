@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class Main {
-    public static final int MAX_RAND_NUM = 1000000;
+    public static final int MAX_RAND_NUM = 100000;
     public static final int MIN_RAND_NUM = 0;
     public static final int TIME = 2000;
 
@@ -9,32 +9,38 @@ public class Main {
         BufferedReader tastiera = new BufferedReader(new InputStreamReader(System.in));
         int numOfThread = 0;
         int i = 0;
-        boolean correct = false;
-        GenerateFactorial num = new GenerateFactorial();
+        boolean correct;
 
         System.out.print("Inserisci il numero di fattoriali da calcolare: ");
 
         do {
+            correct = false;
             try {
                 numOfThread = Integer.valueOf(tastiera.readLine()).intValue();
+                if(numOfThread < 1) {
+                    System.out.println("Non puoi inserire un numero minore di 1");
+                    System.out.print("Inserisci il numero di fattoriali da calcolare: ");
+                } else  
+                    correct = true;
+
             } catch (Exception e) {
                 System.out.println("Input non corretto.");
-                System.out.println("Reinserisci Numero.");
-                correct = true;
+                System.out.print("Reinserisci Numero:");
             }
-        } while (correct);
+        } while (!correct);
 
         Factorial[] factorials = new Factorial[numOfThread];
 
         for (i = 0; i < numOfThread; i++) {
-            factorials[i] = new Factorial(i);
+            GenerateFactorial numero = new GenerateFactorial();
+            factorials[i] = new Factorial(numero.getNumRand());
             factorials[i].setDaemon(true);
             factorials[i].start();
 
             try {
                 factorials[i].join(TIME);
                 if (factorials[i].isAlive()) {
-                    System.out.println("The factorial of" + " (" + num.getNumRand() + ") " + "is still in progress");
+                    System.out.println("The factorial of" + " (" + numero.getNumRand() + ") " + "is still in progress");
                 }
 
             } catch (Exception e) {

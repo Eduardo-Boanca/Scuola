@@ -46,6 +46,18 @@ public class Film extends Opera implements Recensibile {
         stelle_recensione = MyStelle_recensione;
     }
 
+    public void presentati() {
+        System.out.println("\nIl titolo è " + this.getTitolo());
+        System.out.println("\nL'autore è " + this.getAutore());
+        System.out.println("\nL'anno di pubblicazione è " + this.getAnno_pubb());
+        System.out.println("\nLa casa distributrice è " + this.getCasa_Distro());
+        System.out.println("\nIl voto è " + this.getStelle_Recensioni());
+    }
+
+    @Override
+    public String toString() {
+        return "Film: " + this.getTitolo() + " " + this.getAutore() + " " + getAnno_pubb() + " " + getCasa_Distro() + " " + getStelle_Recensioni();
+    }
 
     public int isBetterThen(int voto) {
         int result;

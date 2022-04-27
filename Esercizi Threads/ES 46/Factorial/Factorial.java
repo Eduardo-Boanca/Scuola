@@ -10,10 +10,16 @@ public class Factorial extends Thread {
         this.numeroFattoriali = numeroFattoriali;
     }
 
+    public int getNumeroFattoriali() {
+        return numeroFattoriali;
+    }
+
     public void run() {
-        for (int i = 1; i < num.getNumRand(); i++)
+        for (int i = 1; i < this.numeroFattoriali; i++)
             factorial = factorial.multiply(BigInteger.valueOf(i));
 
-        System.out.println(Thread.currentThread().getName() + " has calculated the factorial of" + " (" + num.getNumRand() + ") " + "which is " + factorial);
+        System.out.println(Thread.currentThread().getName() + " has calculated the factorial of" + " ("
+                + num.getNumRand() + ") " + "which is " + factorial);
+
     }
 }
