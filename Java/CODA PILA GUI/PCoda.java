@@ -9,7 +9,7 @@ public class PCoda extends JFrame implements ActionListener {
     private JPanel p2 = new JPanel();
 
     private JTextField tf = new JTextField(10);
-    private JTextField ris = new JTextField(10);
+    private JTextField feedback = new JTextField(10);// da un feedback su quello che è avvenuto es. ""Il carrello è vuoto. Inserisci un ordine"
 
     private JLabel oggetto = new JLabel("Inserire quello che si vuole acquistare");
     private JLabel carrello = new JLabel("Carrello ");
@@ -27,15 +27,11 @@ public class PCoda extends JFrame implements ActionListener {
         ritira.setForeground(Color.BLACK);
         contenuto.setForeground(Color.BLACK);
 
-        ordina.setBackground(Color.BLACK);
-        ritira.setBackground(Color.BLACK);
-        contenuto.setBackground(Color.BLACK);
-
         p1.setLayout(new GridLayout(3, 2, 2, 2));
         p1.add(oggetto);
         p1.add(tf);
         p1.add(carrello);
-        p1.add(ris);
+        p1.add(feedback);
 
         p2.setLayout(new GridLayout(3, 2, 2, 2));
         p2.add(ordina);
@@ -46,7 +42,7 @@ public class PCoda extends JFrame implements ActionListener {
         add(p1);
         add(p2);
 
-        ris.setEditable(false);
+        feedback.setEditable(false);
         ordina.addActionListener(this);
         ritira.addActionListener(this);
         contenuto.addActionListener(this);
@@ -66,26 +62,26 @@ public class PCoda extends JFrame implements ActionListener {
             case "Ordina":
                 if (str.isEmpty() == false) {// Empty controlla che il contenuto del textfield sia vuoto o no
                     lista.add(str);
-                    ris.setText("Inserimento avvenuto");
+                    feedback.setText("Inserimento avvenuto");
                 } else
-                    ris.setText("Il carrello è vuoto. Inserisci un ordine");
+                    feedback.setText("Il carrello è vuoto. Inserisci un ordine");
                 tf.setText("");
                 break;
 
             case "Ritira":
                 if (size > 0) {
-                    ris.setText("Primo ordine " + lista.get(0) + " ritirato");
+                    feedback.setText("Primo ordine " + lista.get(0) + " ritirato");
                     lista.remove(0);
                 } else
-                    ris.setText("Il carrello è vuoto. Inserisci un ordine");
+                    feedback.setText("Il carrello è vuoto. Inserisci un ordine");
                 tf.setText("");
                 break;
 
             case "Contenuto":
                 if (size > 0) {
-                    ris.setText(lista.toString());
+                    feedback.setText(lista.toString());
                 } else
-                    ris.setText("Il carrello è vuoto. Inserisci un ordine");
+                    feedback.setText("Il carrello è vuoto. Inserisci un ordine");
                 break;
         }
     }
