@@ -1,4 +1,7 @@
 import javax.xml.bind.annotation.XmlRootElement;
+
+import java.util.Date;
+
 import javax.xml.bind.annotation.XmlElement;
 
 @XmlRootElement
@@ -7,7 +10,7 @@ public class Macchina {
     private String brand;
     private String anno;
     private String targa;
-
+    
     public String getBrand() {
         return brand;
     }
