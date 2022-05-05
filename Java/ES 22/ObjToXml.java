@@ -1,35 +1,54 @@
-import java.beans.XMLDecoder;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.sql.Date;
-
-import org.swixml.SwingEngine;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
+import ch.randelshofer.quaqua.ext.base64.Base64.OutputStream;
+
 public class ObjToXml {
-    public static void main(String[] args) throws Exception {
-        Macchina macchina = new Macchina();
-        Macchina macchina2 = new Macchina();
-        macchina.setBrand("Mclaren");
-        macchina.setAnno("2022");
-        macchina.setTarga("X1BC34WK");
+    public static void main(String[] args) throws FileNotFoundException {
+        
+        Ordine ordine = new Ordine();
+        ordine.setCustomerId("Cliente01");
+        ordine.setOrderId("1");
+        ordine.setOrderTotal(100.00);
 
-        macchina2.setBrand("Cadillac");
-        macchina2.setAnno("2022");
-        macchina2.setTarga("A1B2C3D4");
+        ArrayList<OrderDetail> orders = new ArrayList<OrderDetail>();
 
-        JAXBContext context = JAXBContext.newInstance(Macchina.class);
-        Marshaller marshall = context.createMarshaller();
-        marshall.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE); //se su TRUE formatta il file in XML
-        marshall.marshal(macchina, new File("macchina.xml"));
-        //marshall.marshal(macchina2, new File("macchina2.xml"));
+        OrderDetail orderDetail = new OrderDetail();
+        orderDetail.setLineId("Line01");
+        orderDetail.setItemNumber("Item05");
+        orderDetail.setQuantity(10);
+        orderDetail.setPrice(15.99);
+        orders.add(orderDetail);
 
+        orderDetail = new OrderDetail();
+        orderDetail.setLineId("Line02");
+        orderDetail.setItemNumber("Item10");
+        orderDetail.setQuantity(5);
+        orderDetail.setPrice(3.99);
+        orders.add(orderDetail);
 
+        ordine.setOrderDetailList(orders);
+
+        try {
+            //Classe responsabile per il processo di creazione del file XML da Oggetto
+            JAXBContext jaxbContext = JAXBContext.newInstance(Ordine.class);
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+
+            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+
+            //Stampa il file nella console
+            jaxbMarshaller.marshal(ordine, System.out);
+
+            //Crea il file nel PC
+            FileOutputStream output = new FileOutputStream("Ordine.xml");
+            jaxbMarshaller.marshal(ordine, output);
+        } catch(JAXBException e) {
+            e.printStackTrace();
+        }
     }
-
-
 }

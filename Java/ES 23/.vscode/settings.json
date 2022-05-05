@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "json-20220320.jar",
+        "json-simple-2.3.0.jar",
+        "gson-2.9.0.jar"
+    ]
+}

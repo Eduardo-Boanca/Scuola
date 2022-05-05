@@ -6,7 +6,7 @@ public class BankAccount {
     }
 
     public BankAccount() {
-        this(0);
+        this(1000);
     }
 
     public double getBalance() {
@@ -31,7 +31,7 @@ public class BankAccount {
            return;
         }
         double temp = balance;
-        temp = temp - amount;
+        temp -= amount;
         try {
            Thread.sleep(200); // simulate consumption time
         } catch (InterruptedException e) {
