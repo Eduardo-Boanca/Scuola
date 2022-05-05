@@ -2,6 +2,21 @@
     "java.project.referencedLibraries": [
         "json-20220320.jar",
         "json-simple-2.3.0.jar",
-        "gson-2.9.0.jar"
+        "gson-2.9.0.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/codemodel.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/dtd-parser.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/FastInfoset.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/istack-commons-runtime.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/istack-commons-tools.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/javax.activation-api.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/jaxb-api.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/jaxb-jxc.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/jaxb-runtime.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/jaxb-xjc.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/relaxng-datatype.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/rngom.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/stax-ex.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/txw2.jar",
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/xsom.jar"
     ]
 }
