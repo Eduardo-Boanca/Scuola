@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ordine orderId="1">
+    <CustomerID>Cliente01</CustomerID>
+    <OrderDetails>
+        <OrderDetail lineId="Line01">
+            <itemNumber>Item05</itemNumber>
+            <price>15.99</price>
+            <quantity>10</quantity>
+        </OrderDetail>
+        <OrderDetail lineId="Line02">
+            <itemNumber>Item10</itemNumber>
+            <price>3.99</price>
+            <quantity>5</quantity>
+        </OrderDetail>
+    </OrderDetails>
+    <OrderTotal>100.0</OrderTotal>
+</ordine>

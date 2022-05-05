@@ -8,19 +8,19 @@ public class CSVReaderFile {
 
         boolean firstLine = true;
         ArrayList<String> Dati = new ArrayList<String>();
-
+        
         try (CSVReader reader = new CSVReader(new FileReader("MezziPubblici_tutti.csv"))) {
             String[] lineInArray;
+
+            lineInArray = reader.readNext();
+            int colIndex = Arrays.asList(lineInArray).indexOf("9.14 - Dopo lo scoppio della pandemia, hai cambiato il mezzo utilizzato?");
+            
+
             while ((lineInArray = reader.readNext()) != null) {
-                if (firstLine) {
-                    firstLine = false;
-                    continue;
-                } else {
-                    Dati.add(lineInArray[41]);
-                    System.out.println(Dati);
-                    // System.out.println("Data e Ora " + lineInArray[0] + "      Codice Postale " + lineInArray[1]
-                    //         + "     Sesso " + lineInArray[2]);
-                }
+                    Dati.add(lineInArray[colIndex]);
+                    System.out.println("\n" + Dati);
+
+                
             }
         }
 
