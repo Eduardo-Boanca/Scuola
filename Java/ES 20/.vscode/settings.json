@@ -1,5 +1,6 @@
 {
     "java.project.referencedLibraries": [
-        "/Users/edudu/Desktop/opencsv-3.8.jar"
+        "/Users/edudu/Desktop/opencsv-3.8.jar",
+        "C:/Users/edubo/OneDrive/Documenti/opencsv-5.6.jar"
     ]
 }
