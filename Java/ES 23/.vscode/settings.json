@@ -17,6 +17,10 @@
         "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/rngom.jar",
         "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/stax-ex.jar",
         "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/txw2.jar",
-        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/xsom.jar"
+        "/Users/edudu/Desktop/Scuola/Java/ES 22/jaxb-ri 2/mod/xsom.jar",
+        "/Users/edudu/Downloads/jackson-core-2.13.2.jar",
+        "/Users/edudu/Downloads/jar_files (7)/jackson-annotations-2.13.2.jar",
+        "/Users/edudu/Downloads/jar_files (7)/jackson-core-2.13.2.jar",
+        "/Users/edudu/Downloads/jar_files (7)/jackson-databind-2.13.2.2.jar"
     ]
 }
