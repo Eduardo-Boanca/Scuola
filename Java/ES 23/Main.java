@@ -36,42 +36,41 @@ public class Main {
                 // DATI SU FILE JSON CON JACKSON API
                 // ObjectMapper mapper = new ObjectMapper();
                 // try {
-                //     mapper.writeValue(Paths.get("Race_Results.json").toFile(), infoString);
+                // mapper.writeValue(Paths.get("Race_Results.json").toFile(), infoString);
                 // } catch (JsonProcessingException e) {
-                //     e.printStackTrace();
+                // e.printStackTrace();
                 // }
 
                 // *****PER ESPORTARE UN FILE TXT*****//
                 try {
-                PrintWriter out = new PrintWriter("Race_Results.txt");
-                out.println(infoString.toString());
+                    PrintWriter out = new PrintWriter("Race_Results2.xml");
+                    out.println(infoString.toString());
                 } catch (FileNotFoundException e) {
-                System.err.println("File doesn't exist");
-                e.printStackTrace();
+                    System.err.println("File doesn't exist");
+                    e.printStackTrace();
                 }
 
+                // PER ESPORTARE I DATI IN XML
+                try {
+                    // Classe responsabile per il processo di creazione del file XML da Oggetto
+                    JAXBContext jaxbContext = JAXBContext.newInstance(Main.class);
+                    Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-                //PER ESPORTARE I DATI IN XML
-                // try {
-                // // Classe responsabile per il processo di creazione del file XML da Oggetto
-                // JAXBContext jaxbContext = JAXBContext.newInstance(Main.class);
-                // Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+                    jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
-                // jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+                    // Stampa il file nella console
+                    // jaxbMarshaller.marshal(infoString, System.out);
 
-                // // Stampa il file nella console
-                // jaxbMarshaller.marshal(infoString, System.out);
-
-                // // Crea il file nel PC
-                // FileOutputStream output = new FileOutputStream("Race_Results.xml");
-                // jaxbMarshaller.marshal(infoString, output);
-                // } catch (JAXBException e) {
-                // e.printStackTrace();
-                // }
+                    // Crea il file nel PC
+                    // FileOutputStream output = new FileOutputStream("Race_Results.xml");
+                    // shaller.marshal(infoString, output);
+                } catch (JAXBException e) {
+                    e.printStackTrace();
+                }
 
                 scanner.close();
 
-                //System.out.println(infoString);
+                // System.out.println(infoString);
 
             }
 

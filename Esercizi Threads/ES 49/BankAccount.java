@@ -1,7 +1,7 @@
 public class BankAccount {
-    private double balance;
+    private float balance;
 
-    public BankAccount(double MyBalance) {
+    public BankAccount(float MyBalance) {
         balance = MyBalance;
     }
 
@@ -9,35 +9,16 @@ public class BankAccount {
         this(1000);
     }
 
-    public double getBalance() {
+    public float getBalance() {
         return balance;
     }
 
-    public void deposit(double amount) {
-        double temp = balance;
-        temp += amount;
-        try {
-            Thread.sleep(300); // simulate production time
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Bilancio dopo il deposito = " + temp+"€");
-        balance = temp;
+    public void deposit(float amount) {
+        this.balance = this.balance + amount;
+ 
     }
 
-    public void withdraw(double amount) {
-        if (balance < amount) {
-           System.out.println("Fondi insufficienti!");
-           return;
-        }
-        double temp = balance;
-        temp -= amount;
-        try {
-           Thread.sleep(200); // simulate consumption time
-        } catch (InterruptedException e) {
-           e.printStackTrace();
-        }
-        System.out.println("Bilancio dopo il prelievo = " + temp+"€");
-        balance = temp;
-     }
+    public void withdraw(float amount) {
+        this.balance = this.balance - amount;
+    }
 }
