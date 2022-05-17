@@ -1,5 +1,6 @@
 public class Correntista extends Thread {
     private BankAccount bank;
+    float randomOperation;
 
     public Correntista(BankAccount myBank) {
         this.bank = myBank;
@@ -7,24 +8,21 @@ public class Correntista extends Thread {
 
     @Override
     public void run() {
-        float initial_balance = this.bank.getBalance();
-
         while (bank.getBalance() >= 0) {
-            // double randomAmount = CoinToss.coinFlip();
-            // randomAmount = (initial_balance / 2) + (randomAmount * initial_balance);
             float randomAmount = (float) (500 + (Math.random() * 250));
+            randomOperation = CoinToss.coinToss();
             synchronized (bank) {
-                if (Math.random() > 0.5) {
-                    bank.deposit(randomAmount);
-                    System.out.println(Thread.currentThread().getName() + " has deposited " + randomAmount
-                            + ". This bank count has now: " + this.bank.getBalance() + " €");
-                } else {
+                if (randomOperation > 0.5) {
                     bank.withdraw(randomAmount);
                     System.out.println(Thread.currentThread().getName() + " has withdrawed " + randomAmount
-                            + ". This bank count has now: " + this.bank.getBalance() + " €");
-
+                            + ". This bank account has now: " + this.bank.getBalance() + "€");
                     if (bank.getBalance() < 0)
-                        System.out.println(Thread.currentThread().getName() + " has finished the money");
+                        System.out.println(Thread.currentThread().getName() + " has finished the money in his bank account");
+                } else {
+                    bank.deposit(randomAmount);
+                    System.out.println(Thread.currentThread().getName() + " has deposited " + randomAmount
+                            + ". This bank account has now: " + this.bank.getBalance() + "€");
+
                 }
             }
         }

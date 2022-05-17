@@ -2,11 +2,7 @@ public class BankAccount {
     private float balance;
 
     public BankAccount(float MyBalance) {
-        balance = MyBalance;
-    }
-
-    public BankAccount() {
-        this(1000);
+        this.balance = MyBalance;
     }
 
     public float getBalance() {
