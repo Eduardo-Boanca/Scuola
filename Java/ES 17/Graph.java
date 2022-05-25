@@ -31,7 +31,7 @@ public class Graph extends JFrame {
         g.drawString("Funzione", 30, 60);
         g.drawLine(350, 30, 350, 700); //asse y
         g.drawLine(0, 350, 700, 350); //asse x
-        g.setColor(Color.GREEN);
+        g.setColor(Color.GREENn);
         g.fillOval(x, y, 3, 3); //per poter rappresentare il grafico tramite puntini
         run();
         repaint(); //usato per aggiornare il frame (aggiorna e poi richiama il metodo paint())

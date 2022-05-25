@@ -9,12 +9,12 @@ public class BankAccount {
         return balance;
     }
 
-    public void deposit(float amount) {
+    public synchronized void deposit(float amount) {
         this.balance = this.balance + amount;
  
     }
 
-    public void withdraw(float amount) {
+    public synchronized void withdraw(float amount) {
         this.balance = this.balance - amount;
     }
 }
