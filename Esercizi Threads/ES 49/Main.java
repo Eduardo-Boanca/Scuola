@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
+        
         BankAccount count = new BankAccount(1000);
+        System.out.println("Starting account balance is: " + count.getBalance());
         Thread first_thread = new Thread(new Correntista(count));
         Thread second_thread = new Thread(new Correntista(count));
 
@@ -11,7 +13,6 @@ public class Main {
         second_thread.start();
 
         try {
-            System.out.println("Starting account balance is: " + count.getBalance());
             first_thread.join();
             second_thread.join();
         } catch (InterruptedException e) {
