@@ -9,7 +9,7 @@ public class Main {
 
         first_thread.start();
         second_thread.start();
-        
+
         try {
             System.out.println("Starting account balance is: " + count.getBalance());
             first_thread.join();
