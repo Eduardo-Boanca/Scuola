@@ -19,13 +19,15 @@ public class Cliente extends Thread {
 
             }
 
-            popcorn.svuota(100);
-            popcorn.notifyAll();
-            System.out.println("Ho mangiato 100G di popcorn");
-            try {
-                Thread.sleep(200);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            if (popcorn.running) {
+                popcorn.svuota(100);
+                popcorn.notifyAll();
+                System.out.println("Ho mangiato 100G di popcorn");
+                try {
+                    Thread.sleep(200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
 
         }
@@ -37,6 +39,6 @@ public class Cliente extends Thread {
         while (popcorn.running)
             mangia();
 
-        System.out.println("Il cliente ha finito di mangiare.\n");
+        System.out.println("Il cliente non ha più voglia di mangiare.\n");
     }
 }

@@ -15,6 +15,10 @@ public class PopCorn {
         this.quantity = quantity;
     }
 
+    public void setEmpty(boolean empty) {
+        this.empty = empty;
+    }
+
     public int getQuantity() {
         return this.quantity;
     }
