@@ -2,26 +2,29 @@ public class Inserviente extends Thread {
 
     private PopCorn popcorn;
 
-    public Inserviente(PopCorn popcorn, String nome) {
-        this.popcorn = popcorn;
+    public Inserviente(PopCorn pop, String nome) {
+        this.popcorn = pop;
         setName(nome);
     }
 
-    public synchronized void refill() {
-        popcorn.riempi();
+    public void refill() {
 
-        while (!popcorn.getEmpty()) {
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        synchronized (this.popcorn) {
+            while (!popcorn.getEmpty()) {
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
             }
+            popcorn.riempi();
+            popcorn.setEmpty(false);
+            notifyAll();
 
+            System.out.println();
         }
-        popcorn.setEmpty(false);
-        notifyAll();
 
-        System.out.println();
     }
 
     @Override

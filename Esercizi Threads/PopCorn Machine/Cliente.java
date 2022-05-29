@@ -2,26 +2,31 @@ public class Cliente extends Thread {
 
     PopCorn popcorn;
 
-    public Cliente(PopCorn popcorn, String nome) {
-        this.pop = popcorn;
+    public Cliente(PopCorn pop, String nome) {
+        this.popcorn = pop;
         setName(nome);
     }
 
-    public synchronized void mangia() {
-        popcorn.svuota();
+    public void mangia() {
 
-        while (popcorn.getEmpty()) {
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        synchronized (this.popcorn) {
+            System.out.println("SONO QUI 1");
+
+            while (popcorn.getEmpty()) {
+                System.out.println("SONO QUI 2");
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
             }
+            popcorn.svuota();
+            popcorn.setEmpty(true);
+            notifyAll();
 
+            System.out.println();
         }
-        popcorn.setEmpty(true);
-        notifyAll();
-
-        System.out.println();
     }
 
     @Override
