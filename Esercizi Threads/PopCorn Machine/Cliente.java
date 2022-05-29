@@ -1,6 +1,6 @@
 public class Cliente extends Thread {
 
-    PopCorn popcorn;
+    private PopCorn popcorn;
 
     public Cliente(PopCorn pop, String nome) {
         this.popcorn = pop;
@@ -9,29 +9,32 @@ public class Cliente extends Thread {
 
     public void mangia() {
 
-        synchronized (this.popcorn) {
-            System.out.println("SONO QUI 1");
-
+        synchronized (popcorn) {
             while (popcorn.getEmpty()) {
-                System.out.println("SONO QUI 2");
                 try {
-                    wait();
+                    popcorn.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
             }
-            popcorn.svuota();
-            popcorn.setEmpty(true);
-            notifyAll();
 
-            System.out.println();
+            popcorn.svuota(100);
+            popcorn.notifyAll();
+            System.out.println("Ho mangiato 100G di popcorn");
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
         }
+
     }
 
     @Override
     public void run() {
-        for (int i = 0; i < 5; i++)
+        while (popcorn.running)
             mangia();
 
         System.out.println("Il cliente ha finito di mangiare.\n");

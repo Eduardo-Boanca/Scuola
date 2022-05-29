@@ -1,6 +1,9 @@
 public class Inserviente extends Thread {
 
     private PopCorn popcorn;
+    public static final int NUM_RICARICHE = 5;
+    private int contatore;
+    public static final int TEMPO_RICARICA = 2000;
 
     public Inserviente(PopCorn pop, String nome) {
         this.popcorn = pop;
@@ -8,19 +11,31 @@ public class Inserviente extends Thread {
     }
 
     public void refill() {
-
-        synchronized (this.popcorn) {
+        synchronized (popcorn) {
             while (!popcorn.getEmpty()) {
                 try {
-                    wait();
+                    popcorn.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
             }
             popcorn.riempi();
-            popcorn.setEmpty(false);
-            notifyAll();
+            for (int i = 0; i < TEMPO_RICARICA; i += 1000) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(Thread.currentThread().getName() + " sta riempiendo");
+            }
+
+            System.out.println("Ho finito di ricaricare");
+
+            if (contatore == 0) {
+                popcorn.running = false;
+            }
+            popcorn.notifyAll();
 
             System.out.println();
         }
@@ -29,9 +44,9 @@ public class Inserviente extends Thread {
 
     @Override
     public void run() {
-        for (int i = 0; i < 5; i++)
+        for (contatore = NUM_RICARICHE; contatore >= NUM_RICARICHE; contatore--) {
             refill();
-
+        }
         System.out.println("I popcorn sono finiti.\n");
     }
 }

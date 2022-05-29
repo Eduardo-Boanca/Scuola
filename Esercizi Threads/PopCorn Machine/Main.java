@@ -4,7 +4,8 @@ public class Main {
         Cliente cliente = new Cliente(popcorn, "Cliente");
         Inserviente inserviente = new Inserviente(popcorn, "Inserviente");
 
-        cliente.start();
         inserviente.start();
+        cliente.start();
+
     }
 }
