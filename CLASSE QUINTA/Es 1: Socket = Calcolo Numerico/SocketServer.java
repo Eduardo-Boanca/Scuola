@@ -5,8 +5,8 @@ import java.net.Socket;
 public class SocketServer{
     public static void main (String[] args)
     {
-        //creare il server
         try{
+            //creazione del server
             ServerSocket serverSocket = new ServerSocket(9999);
             while (true)
             {
@@ -16,7 +16,7 @@ public class SocketServer{
                 int numero = clientSocket.getInputStream().read();
                 numero = numero % 7;
                 clientSocket.getOutputStream().write(numero);
-                //tornar eall'inizio per accettare una nuova connessione
+                //chiusura della connessione
                 clientSocket.close();
             }
             } catch (IOException e) {
