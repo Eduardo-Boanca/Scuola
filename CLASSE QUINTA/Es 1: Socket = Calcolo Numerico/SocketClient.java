@@ -1,4 +1,5 @@
 import java.net.*;
+import java.util.*;
 import java.io.*;
 
 public class SocketClient {
@@ -7,14 +8,50 @@ public class SocketClient {
     private final static String NOME_SERVER = "127.0.0.1";
     private int numeroUtente;
     private int numeroServer;
-    private Socket clientSocket;
+    private static Socket clientSocket;
     private PrintWriter out;
     private BufferedReader in;
 
-    public SocketClient() throws IOException, UnknownHostException {
-        clientSocket = new Socket(NOME_SERVER, PORTA_SERVER);
-        out = new PrintWriter(clientSocket.getOutputStream());
-        in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+    public static void main(String[] args) throws IOException {
+        try {
+            clientSocket = new Socket(NOME_SERVER, PORTA_SERVER);
+        } catch (UnknownHostException e) {
+            System.out.println("Host sconosciuto " + e.getMessage());
+        } catch (IOException e) {
+            System.out.println("Errore di comuncazione " + e.getMessage());
+        }
+
+        accessoServer();
+    }
+
+
+    public static void accessoServer() {
+        try {
+            Scanner input = new Scanner(clientSocket.getInputStream());
+            PrintWriter output = new PrintWriter(clientSocket.getOutputStream(), true);
+
+            //Scanner inputUtente = new Scanner(System.in);
+
+            int numeroInserito, rispostaServer;
+
+            do {
+                System.out.println("Inserisci il numero ");
+                numeroInserito = ((int) Math.random()*100);
+                //numeroInserito = inputUtente.nextInt();
+
+                //invio numeri al server
+                output.println(numeroInserito);
+                rispostaServer = input.readLine(); //ricevo risposta dal server
+                System.out.println("SERVER: " + rispostaServer);
+            } while(numeroInserito != 0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            clientSocket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void connetti() {
@@ -27,7 +64,7 @@ public class SocketClient {
             System.out.println("numero utente: " + numeroUtente);
             System.out.println("Client: invio del numero al server");
             out.println(numeroUtente);
-            numeroServer = in.readLine();
+            numeroServer = in.nextInt();
             System.out.println("Client: Risposta del server: " + numeroServer);
             System.out.println("Chiusura connessione");
             clientSocket.close();
@@ -36,15 +73,5 @@ public class SocketClient {
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        try {
-            Socket client = new SocketClient();
-            client.connetti();
-            client.comunica();
-        } catch (UnknownHostException e) {
-            System.out.println("Host sconosciuto " + e.getMessage());
-        } catch (IOException e) {
-            System.out.println("Errore di comuncazione " + e.getMessage());
-        }
-    }
+
 }
