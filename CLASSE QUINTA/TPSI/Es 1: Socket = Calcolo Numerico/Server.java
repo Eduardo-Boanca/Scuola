@@ -2,6 +2,13 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/* Eduardo Boanca
+ * Esercizio 1 TPSI
+ * Esercizio che controlla se il numero è un multiplo di 7 oppure non null
+ * Il client invia il numero al server, il server esegue il calcolo e manda il risultato al client
+ * il client lo stampa
+ */
+
 public class Server {
     public static void main(String[] args) {
         try {
