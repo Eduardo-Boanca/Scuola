@@ -55,4 +55,36 @@ public class Lettori {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + this.id;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Lettori other = (Lettori) obj;
+        if (this.id != other.id) {
+            return false;
+        }
+        return true;
+    }
+
+    public String toJson() {
+        String s = "{\n\"lettore\"\n{\n\"id\":\"" + id + "\",\n";
+        s += "\"name\":\"" + nome + "\",\n";
+        s += "\"cognome\":\"" + cognome + "\",\n";
+        s += "\"telefono\":\"" + numero_telefono + "\",\n";
+        s += "\"email\":\"" + email + "\",\n";
+        s += "\n}\n}";
+        return s;
+    }
 }
