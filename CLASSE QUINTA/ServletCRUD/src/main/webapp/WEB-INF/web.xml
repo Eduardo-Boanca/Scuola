@@ -5,21 +5,16 @@
             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>crudServlet</servlet-name>
-        <servlet-class>crudServlet</servlet-class>
+        <servlet-class>servletCrud.crudServlet</servlet-class>
         <init-param>
             <param-name>connectionString</param-name>
             <param-value>
-                jdbc:mysql://localhost:8889/boanca_db?user=root&amp;password=root
+                jdbc:mysql://localhost:8889/scuola?user=root&amp;password=root
             </param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
-        <servlet-name>servletCRUD</servlet-name>
+        <servlet-name>crudServlet</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
-    <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
-    </session-config>
 </web-app>
